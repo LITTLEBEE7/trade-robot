@@ -1,3 +1,4 @@
+import re
 import okx.Account_api as Account
 import okx.Funding_api as Funding
 import okx.Market_api as Market
@@ -126,6 +127,26 @@ def cancel_pending_orders(instId,algoOrderType):
             cancelAlgoOrdersRes = tradeAPI.cancel_algo_order([{"instId":instId,"algoId":algoOrder["algoId"]}])
             print("取消未成交的订单:")
             print(cancelAlgoOrdersRes)
+    return "cancel orders successfuly"
+
+# 市价平仓（根据用户的持仓模式去平仓）
+def close_position(_instId, _tdMode):
+    accountConf = accountAPI.get_account_config()
+    print(accountConf)
+    accountPosMode = accountConf["data"][0]["posMode"]
+    print("账户的持仓模式:")
+    print(accountPosMode)
+    if(accountPosMode == "net_mode"):
+        print("单向模式平仓:")
+        closeNetRes = tradeAPI.close_positions(_instId, _tdMode)
+        print(closeNetRes)
+    else:
+        print("双向模式平仓:")
+        closeShortRes = tradeAPI.close_positions(_instId, _tdMode,"short")
+        closeLongRes = tradeAPI.close_positions(_instId, _tdMode,"long")
+        print(closeShortRes)
+        print(closeLongRes)
+
 # 设置止盈止损单
 def set_tp_or_slOrd(params,sz,lastOrdId):
     global lastOrdType,lastAlgoOrdId
@@ -171,7 +192,7 @@ def before_req():
         abort(401)
 
 
-# 接收post请求
+# 接收post请求-下单
 @app.route('/trade', methods=['POST'])
 def start_trade():
     res = {
@@ -219,9 +240,7 @@ def start_trade():
         # 取消未成交的订单(一般订单和策略订单)
         cancel_pending_orders(_instId,"oco")
         # 市价平仓
-        closeRes = tradeAPI.close_positions(_instId, _tdMode)
-        print("市价平仓:")
-        print(closeRes)
+        close_position(_instId,_tdMode)
         # 开仓的杠杆倍数
         setLevelRes = accountAPI.set_leverage(instId=_instId, lever=_level, mgnMode=_tdMode)
         print("开的杠杆倍数:")
@@ -247,6 +266,40 @@ def start_trade():
             # 设置止盈止损
             set_tp_or_slOrd(_params,sz,lastOrderId)
             lastOrdType = _params['side']
+    return res
+
+# 接收post请求-撤单
+@app.route('/cancel', methods=['POST'])
+def cancel_order():
+    res = {
+        "statusCode":2000,
+        "msg":""
+
+    }
+    # 获取请求体
+    _params = request.json
+    print("请求参数：")
+    print(_params)
+    _instId = _params["symbol"]
+    # 取消未成交的订单(一般订单和策略订单)
+    res["msg"] = cancel_pending_orders(_instId,"oco")
+    return res
+
+# 接收post请求-平仓
+@app.route('/close', methods=['POST'])
+def close():
+    res = {
+        "statusCode":2000,
+        "msg":""
+
+    }
+     # 获取请求体
+    _params = request.json
+    print("请求参数：")
+    print(_params)
+    _instId = _params["symbol"]
+    _tdMode = _params["tdMode"]
+    res["msg"] = close_position(_instId,_tdMode)
     return res
 
 if __name__ == '__main__':
