@@ -1,11 +1,16 @@
 # gunicorn配置文件
+# import multprocessing
 
 # 并行的工作进程数
-workers = 4
+import multiprocessing
+
+
+# workers = 4
+workers = multiprocessing.cpu_count()*2+1
 # 指定每个工作者的线程数
 threads = 2
 # 监听内网的端口
-bind = '127.0.0.1:8090'
+bind = '0.0.0.0:80'
 # 设置守护进程
 daemon = 'false'
 # 设置最大并发量

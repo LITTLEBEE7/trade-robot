@@ -31,9 +31,10 @@ else:
 
 # 服务配置
 apiSec = config['service']['api_sec']
-api_key = "your_apikey"
-secret_key = "your_secretkey"
-passphrase = "your_api_passwd"
+# type your api mesage
+api_key = "test"
+secret_key = "test"
+passphrase = "test"
 flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -225,6 +226,10 @@ def start_trade():
         setLevelRes = accountAPI.set_leverage(instId=_instId, lever=_level, mgnMode=_tdMode)
         print("开的杠杆倍数:")
         print(setLevelRes)
+        # 设置持仓模式
+        posModeRes = accountAPI.set_position_mode("net_mode")
+        print("设置账户的持仓模式:")
+        print(posModeRes)
         # 币张转换
         converRes =  publicAPI.amount_sz_convert(1,_instId,_sz)
         print(converRes)

@@ -52,8 +52,8 @@ class AccountAPI(Client):
     def get_account_config(self):
         return self._request_without_params(GET, ACCOUNT_CONFIG)
 
-    # Get Account Configuration
-    def get_position_mode(self, posMode):
+    # Set Account posMode(设置账户的持仓模式)
+    def set_position_mode(self, posMode):
         params = {'posMode': posMode}
         return self._request_with_params(POST, POSITION_MODE, params)
 
