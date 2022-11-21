@@ -10,6 +10,7 @@ import json
 from flask import Flask
 from flask import request, abort
 import os
+import logging
 import _thread
 import configparser
 import urllib.request
@@ -27,7 +28,7 @@ elif os.path.exists('./config.ini'):
         for j in dict(conf._sections[i]):
             config[i][j] = conf.get(i, j)
 else:
-    print("配置文件 config.json 不存在，程序即将退出")
+    logging.info("配置文件 config.json 不存在，程序即将退出")
     exit()
 
 # 服务配置
@@ -38,6 +39,11 @@ secret_key = "test"
 passphrase = "test"
 flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
+
+# 格式化日志
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
+DATE_FORMAT = "%Y/%m/%d/ %H:%M:%S %p"
+logging.basicConfig(filename='okx_trade.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT)
 
 # account api
 accountAPI = Account.AccountAPI(api_key, secret_key, passphrase, False, flag)
@@ -60,37 +66,37 @@ publicAPI = Public.PublicAPI(api_key, secret_key, passphrase, False, flag)
 # price=None
 # tdMode="isolated"
 # ret = tradeAPI.place_order(instId=instId,tdMode=tdMode,side=side,ordType=type,sz=amount,px=price)
-# print(json.dumps(ret))
+# logging.info(json.dumps(ret))
 
 # 查看账户配置  Get Account Configuration
 # result = accountAPI.get_account_config()
-# print(json.dumps(result))
+# logging.info(json.dumps(result))
 
 #获取订单的状态
 # result = tradeAPI.get_orders('ADA-USDT-SWAP', '512737372757426176')
-# print(json.dumps(result))
+# logging.info(json.dumps(result))
 
 # 获取交易产品的基础信息
 # mesage  = publicAPI.get_instruments(instType="SWAP",instId="ADA-USDT-SWAP")
-# print(json.dumps(mesage))
+# logging.info(json.dumps(mesage))
 
 # 获取最新的标记价格
 # markPrice = publicAPI.get_mark_price(instType="SWAP",instId="ADA-USDT-SWAP")
-# print(json.dumps(markPrice))
+# logging.info(json.dumps(markPrice))
 
 
 # 市价仓位全平  Close Positions
 # result = tradeAPI.close_positions('ADA-USDT-SWAP', 'isolated')
-# print(json.dumps(result))
+# logging.info(json.dumps(result))
 
 # 设置持仓模式  Set Position mode
 # long_short_mode：双向持仓 net_mode：单向持仓仅适用交割/永续
 # result = accountAPI.get_position_mode('net_mode')
-# print(json.dumps(result))
+# logging.info(json.dumps(result))
 
 # 张币转换
 # ret = publicAPI.amount_sz_convert(type="1",instId="ADA-USDT-SWAP",sz="100")
-# print(json.dumps(ret))
+# logging.info(json.dumps(ret))
 
 # 合约策略下单
 # instId="ADA-USDT-SWAP"
@@ -104,7 +110,7 @@ publicAPI = Public.PublicAPI(api_key, secret_key, passphrase, False, flag)
 # slTriggerPx="0.3"
 # slOrdPx="-1"
 # result=tradeAPI.place_algo_order(instId=instId,tdMode=tdMode,side=side,ordType=ordType,sz=amount,tpTriggerPx=tpTriggerPx,tpOrdPx=tpOrdPx,slTriggerPx=slTriggerPx,slOrdPx=slOrdPx)
-# print(json.dumps(result))
+# logging.info(json.dumps(result))
 
 
 # 取消未成交的挂单
@@ -114,38 +120,38 @@ def cancel_pending_orders(instId,algoOrderType):
     _symbolSplit = _instId.split("-")
     pendingOrders=tradeAPI.get_order_list(instType= _symbolSplit[2])
     pendingAlgoOrders = tradeAPI.order_algos_list(instType= _symbolSplit[2],ordType=algoOrderType)
-    print("当前未成交的订单:")
-    print(pendingOrders)
-    print(pendingAlgoOrders)
+    logging.info("当前未成交的订单:")
+    logging.info(pendingOrders)
+    logging.info(pendingAlgoOrders)
     # 循环遍历未成交的订单然后撤销订单
     for order in pendingOrders["data"]:
             cancelOrdersRes = tradeAPI.cancel_multiple_orders([{"instId":instId,"ordId":order["ordId"]}])
-            print("取消未成交的订单:")
-            print(cancelOrdersRes)
+            logging.info("取消未成交的订单:")
+            logging.info(cancelOrdersRes)
     # 循环遍历未成交的策略订单然后撤销订单
     for algoOrder in pendingAlgoOrders["data"]:
             cancelAlgoOrdersRes = tradeAPI.cancel_algo_order([{"instId":instId,"algoId":algoOrder["algoId"]}])
-            print("取消未成交的订单:")
-            print(cancelAlgoOrdersRes)
+            logging.info("取消未成交的订单:")
+            logging.info(cancelAlgoOrdersRes)
     return "cancel orders successfuly"
 
 # 市价平仓（根据用户的持仓模式去平仓）
 def close_position(_instId, _tdMode):
     accountConf = accountAPI.get_account_config()
-    print(accountConf)
+    logging.info(accountConf)
     accountPosMode = accountConf["data"][0]["posMode"]
-    print("账户的持仓模式:")
-    print(accountPosMode)
+    logging.info("账户的持仓模式:")
+    logging.info(accountPosMode)
     if(accountPosMode == "net_mode"):
-        print("单向模式平仓:")
+        logging.info("单向模式平仓:")
         closeNetRes = tradeAPI.close_positions(_instId, _tdMode)
-        print(closeNetRes)
+        logging.info(closeNetRes)
     else:
-        print("双向模式平仓:")
+        logging.info("双向模式平仓:")
         closeShortRes = tradeAPI.close_positions(_instId, _tdMode,"short")
         closeLongRes = tradeAPI.close_positions(_instId, _tdMode,"long")
-        print(closeShortRes)
-        print(closeLongRes)
+        logging.info(closeShortRes)
+        logging.info(closeLongRes)
 
 # 设置止盈止损单
 def set_tp_or_slOrd(params,sz,lastOrdId):
@@ -167,16 +173,16 @@ def set_tp_or_slOrd(params,sz,lastOrdId):
     # 获取上笔交易的信息
     # 根据上笔交易的状态，设置止盈止损订单
     lastOrderMesage = tradeAPI.get_orders(params["symbol"], lastOrdId)
-    print("上笔订单信息:")
-    print(lastOrderMesage)
+    logging.info("上笔订单信息:")
+    logging.info(lastOrderMesage)
     if lastOrderMesage['data'][0]['state'] == "filled" or lastOrderMesage['data'][0]['state'] == "live":
         algoRes = tradeAPI.place_algo_order(instId=algoParams["instId"],tdMode=algoParams["tdMode"],side=algoParams["side"],ordType=algoParams["ordType"],sz=algoParams["sz"],tpTriggerPx=algoParams["tpTriggerPx"],tpOrdPx=algoParams["tpOrdPx"],slTriggerPx=algoParams["slTriggerPx"],slOrdPx=algoParams["slOrdPx"])
-        print("策略订单信息:")
-        print(algoRes)
+        logging.info("策略订单信息:")
+        logging.info(algoRes)
         if 'code' in algoRes and algoRes['code'] == '0':
             lastAlgoOrdId = algoRes['data'][0]['algoId']
     elif lastOrderMesage['data'][0]['state'] == "canceled":
-        print("todo")
+        logging.info("todo")
 
     
 app = Flask(__name__)
@@ -202,8 +208,8 @@ def start_trade():
     }
     # 获取请求体
     _params = request.json
-    print("请求参数：")
-    print(_params)
+    logging.info("请求参数：")
+    logging.info(_params)
     if "apiSec" not in _params or _params["apiSec"] != apiSec:
         res['msg'] = "apiSec错误"
         res["statusCode"] = 2001
@@ -235,37 +241,39 @@ def start_trade():
     _tdMode = _params["tdMode"]
     _level = _params["level"]
     # 开仓
+    logging.info("准备开仓")
     global lastOrdType
     if _params['side'].lower() in ["buy", "sell"]:
         # 取消未成交的订单(一般订单和策略订单)
         cancel_pending_orders(_instId,"oco")
         # 市价平仓
         close_position(_instId,_tdMode)
-        # 开仓的杠杆倍数
-        setLevelRes = accountAPI.set_leverage(instId=_instId, lever=_level, mgnMode=_tdMode)
-        print("开的杠杆倍数:")
-        print(setLevelRes)
         # 设置持仓模式
         posModeRes = accountAPI.set_position_mode("net_mode")
-        print("设置账户的持仓模式:")
-        print(posModeRes)
+        logging.info("设置账户的持仓模式:")
+        logging.info(posModeRes)
+        # 开仓的杠杆倍数
+        setLevelRes = accountAPI.set_leverage(instId=_instId, lever=_level, mgnMode=_tdMode)
+        logging.info("开的杠杆倍数:")
+        logging.info(setLevelRes)
         # 币张转换
         converRes =  publicAPI.amount_sz_convert(1,_instId,_sz)
-        print(converRes)
+        logging.info(converRes)
         sz = converRes["data"][0]["sz"]
-        print("币张转换:")
+        logging.info("币张转换:")
         if int(sz) < 1:
             res['msg'] = 'Amount is too small. Please increase amount.'
         else:
             # 下单
             orderRes = tradeAPI.place_order(instId=_instId,tdMode= _tdMode,side= _side,ordType= _orderType,sz= sz,px=_px)
-            print("下单信息：")
-            print(orderRes)
+            logging.info("下单信息：")
+            logging.info(orderRes)
             lastOrderId = orderRes["data"][0]["ordId"]
             res['msg'] = orderRes
             # 设置止盈止损
-            set_tp_or_slOrd(_params,sz,lastOrderId)
-            lastOrdType = _params['side']
+            if _params['enable_stop_loss'] and _params['enable_stop_gain']:
+                set_tp_or_slOrd(_params,sz,lastOrderId)
+                lastOrdType = _params['side']
     return res
 
 # 接收post请求-撤单
@@ -278,8 +286,8 @@ def cancel_order():
     }
     # 获取请求体
     _params = request.json
-    print("请求参数：")
-    print(_params)
+    logging.info("请求参数：")
+    logging.info(_params)
     _instId = _params["symbol"]
     # 取消未成交的订单(一般订单和策略订单)
     res["msg"] = cancel_pending_orders(_instId,"oco")
@@ -295,17 +303,30 @@ def close():
     }
      # 获取请求体
     _params = request.json
-    print("请求参数：")
-    print(_params)
+    logging.info("请求参数：")
+    logging.info(_params)
     _instId = _params["symbol"]
     _tdMode = _params["tdMode"]
     res["msg"] = close_position(_instId,_tdMode)
     return res
+
+@app.route('/order', methods=['POST'])
+def order():
+    res = {
+        "statusCode":2000,
+        "msg":""
+
+    }
+      # 获取请求体
+    _params = request.json
+    logging.info("参数打印:")
+    logging.info(_params)
+    return  res
 
 if __name__ == '__main__':
     try:
         # 启动服务
         app.run()
     except Exception as e:
-        print(e)
+        logging.info(e)
         pass
