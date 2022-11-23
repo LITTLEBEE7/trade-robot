@@ -1,0 +1,489 @@
+2022/11/22/ 20:10:02 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:10:02 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:11:29 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 360, in spot_order
+    ret["msg"] = tradeAPI.create_order(symbol=_instId,type=_orderType,side=_side,amount=_sz,price=_px)
+AttributeError: 'TradeAPI' object has no attribute 'create_order'
+2022/11/22/ 20:11:29 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:11:29] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:11:53 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 360, in spot_order
+    ret["msg"] = tradeAPI.create_order(symbol=_instId,type=_orderType,side=_side,amount=_sz,price=_px)
+AttributeError: 'TradeAPI' object has no attribute 'create_order'
+2022/11/22/ 20:11:53 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:11:53] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:12:32 PM - INFO - 参数打印:
+2022/11/22/ 20:12:32 PM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'ADA-USDT', 'amount': '2.2', 'type': 'market', 'side': 'buy', 'price': ''}
+2022/11/22/ 20:12:32 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:12:32] "POST /order HTTP/1.1" 200 -
+2022/11/22/ 20:13:01 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:13:01 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:13:15 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 361, in spot_order
+    ret["msg"] = tradeAPI.create_order(symbol=_instId,type=_orderType,side=_side,amount=_sz,price=_px)
+AttributeError: 'TradeAPI' object has no attribute 'create_order'
+2022/11/22/ 20:13:15 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:13:15] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:14:28 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:14:28 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:14:35 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 362, in spot_order
+    ret["msg"] = tradeAPI.create_order(symbol=_instId,type=_orderType,side=_side,amount=_sz,price=_px)
+AttributeError: 'TradeAPI' object has no attribute 'create_order'
+2022/11/22/ 20:14:35 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:14:35] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:15:09 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:15:09 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:15:15 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 362, in spot_order
+    ret["msg"] = tradeAPI.place_order(symbol=_instId,type=_orderType,side=_side,amount=_sz,price=_px)
+TypeError: TradeAPI.place_order() got an unexpected keyword argument 'symbol'
+2022/11/22/ 20:15:15 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:15:15] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:15:17 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 362, in spot_order
+    ret["msg"] = tradeAPI.place_order(symbol=_instId,type=_orderType,side=_side,amount=_sz,price=_px)
+TypeError: TradeAPI.place_order() got an unexpected keyword argument 'symbol'
+2022/11/22/ 20:15:17 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:15:17] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:18:20 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:18:20 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:18:28 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 362, in spot_order
+    ret["msg"] = tradeAPI.place_order(_instId,"cash",_side,_orderType,_sz,px=_px)
+  File "/Users/myway/Desktop/trade_robot_new/okx/Trade_api.py", line 15, in place_order
+    return self._request_with_params(POST, PLACR_ORDER, params)
+  File "/Users/myway/Desktop/trade_robot_new/okx/client.py", line 58, in _request_with_params
+    return self._request(method, request_path, params)
+  File "/Users/myway/Desktop/trade_robot_new/okx/client.py", line 50, in _request
+    raise exceptions.OkexAPIException(response)
+okx.exceptions.OkexAPIException: API Request Error(code=50111): Invalid OK-ACCESS-KEY
+2022/11/22/ 20:18:28 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:18:28] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 20:19:08 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:19:08 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:19:16 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:19:16] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:21:16 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:21:16 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:21:24 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:21:24] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:23:19 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:23:19] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:24:40 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:24:40] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:25:45 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:25:45 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:26:02 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:26:02] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:28:11 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:28:11] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:28:25 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:28:25 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:28:32 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:28:32] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:28:50 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:28:50] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:29:34 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:29:34 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:29:41 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:29:41] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:30:51 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:30:51] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:35:40 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:35:40] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:36:26 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:36:26] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 20:42:01 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 20:42:01 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 20:42:24 PM - INFO - 127.0.0.1 - - [22/Nov/2022 20:42:24] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:01:19 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:01:19] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:01:46 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:01:46] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:03:20 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:03:20] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:03:32 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:03:32 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:03:40 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 368, in spot_order
+    if(lastOrderSZ !="" and lastOrderSZ != None):
+NameError: name 'lastOrderSZ' is not defined
+2022/11/22/ 21:03:40 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:03:40] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:05:25 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:05:25 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:05:31 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 368, in spot_order
+    if(lastOrderSZ !="" and lastOrderSZ != None):
+NameError: name 'lastOrderSZ' is not defined
+2022/11/22/ 21:05:31 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:05:31] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:05:35 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 368, in spot_order
+    if(lastOrderSZ !="" and lastOrderSZ != None):
+NameError: name 'lastOrderSZ' is not defined
+2022/11/22/ 21:05:35 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:05:35] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:08:21 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:08:21 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:08:27 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 368, in spot_order
+    if(lastOrderID !="" and lastOrderID != None):
+NameError: name 'lastOrderID' is not defined
+2022/11/22/ 21:08:27 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:08:27] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:09:04 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:09:04 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:09:09 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 368, in spot_order
+    print(lastOrderID)
+NameError: name 'lastOrderID' is not defined
+2022/11/22/ 21:09:09 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:09:09] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:11:44 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 368, in spot_order
+    print("sell")
+NameError: name 'lastOrderID' is not defined
+2022/11/22/ 21:11:44 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:11:44] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:12:14 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:12:14 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:12:18 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 369, in spot_order
+    print(lastOrderID == "")
+UnboundLocalError: local variable 'lastOrderID' referenced before assignment
+2022/11/22/ 21:12:18 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:12:18] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:15:25 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:15:25 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:15:37 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:15:37] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:18:03 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:18:03 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:18:09 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:18:09] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:21:37 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:21:37 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:21:52 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:21:52] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:22:13 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:22:13] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:22:43 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:22:43 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:22:54 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:22:54] "POST /spot_order HTTP/1.1" 200 -
+2022/11/22/ 21:26:15 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:26:15 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:26:48 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 371, in spot_order
+    ret["msg"] = tradeAPI.place_order(_instId,"cash","sell",_orderType,round(sz,1),px=_px)
+TypeError: type str doesn't define __round__ method
+2022/11/22/ 21:26:48 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:26:48] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:27:29 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 371, in spot_order
+    ret["msg"] = tradeAPI.place_order(_instId,"cash","sell",_orderType,round(sz,1),px=_px)
+TypeError: type str doesn't define __round__ method
+2022/11/22/ 21:27:29 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:27:29] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:27:36 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x103d9aa70>, 'Connection to www.okx.com timed out. (connect timeout=None)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/trade/fills?instType=SPOT&instId=ADA-USDT&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x103d9aa70>, 'Connection to www.okx.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 367, in spot_order
+    result = tradeAPI.get_fills(instType="SPOT",instId=_instId,limit=1)
+  File "/Users/myway/Desktop/trade_robot_new/okx/Trade_api.py", line 73, in get_fills
+    return self._request_with_params(GET, ORDER_FILLS, params)
+  File "/Users/myway/Desktop/trade_robot_new/okx/client.py", line 58, in _request_with_params
+    return self._request(method, request_path, params)
+  File "/Users/myway/Desktop/trade_robot_new/okx/client.py", line 42, in _request
+    response = requests.get(url, headers=header)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/trade/fills?instType=SPOT&instId=ADA-USDT&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x103d9aa70>, 'Connection to www.okx.com timed out. (connect timeout=None)'))
+2022/11/22/ 21:27:36 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:27:36] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:28:17 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:28:17 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:28:24 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 371, in spot_order
+    ret["msg"] = tradeAPI.place_order(_instId,"cash","sell",_orderType,round(sz,1),px=_px)
+TypeError: type str doesn't define __round__ method
+2022/11/22/ 21:28:24 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:28:24] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:33:12 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:33:12 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:33:45 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 372, in spot_order
+    ret["msg"] = tradeAPI.place_order(_instId,"cash","sell",_orderType,round(sz,1),px=_px)
+TypeError: type str doesn't define __round__ method
+2022/11/22/ 21:33:45 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:33:45] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:34:31 PM - ERROR - Exception on /spot_order [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x1022cab30>, 'Connection to www.okx.com timed out. (connect timeout=None)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/trade/fills?instType=SPOT&instId=ADA-USDT&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x1022cab30>, 'Connection to www.okx.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 367, in spot_order
+    result = tradeAPI.get_fills(instType="SPOT",instId=_instId,limit=1)
+  File "/Users/myway/Desktop/trade_robot_new/okx/Trade_api.py", line 73, in get_fills
+    return self._request_with_params(GET, ORDER_FILLS, params)
+  File "/Users/myway/Desktop/trade_robot_new/okx/client.py", line 58, in _request_with_params
+    return self._request(method, request_path, params)
+  File "/Users/myway/Desktop/trade_robot_new/okx/client.py", line 42, in _request
+    response = requests.get(url, headers=header)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/requests/adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/trade/fills?instType=SPOT&instId=ADA-USDT&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x1022cab30>, 'Connection to www.okx.com timed out. (connect timeout=None)'))
+2022/11/22/ 21:34:31 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:34:31] "[35m[1mPOST /spot_order HTTP/1.1[0m" 500 -
+2022/11/22/ 21:34:42 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/22/ 21:34:42 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/22/ 21:34:52 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:34:52] "POST /spot_order HTTP/1.1" 200 -

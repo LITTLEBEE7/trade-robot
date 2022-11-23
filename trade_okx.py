@@ -34,11 +34,17 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "test"
-secret_key = "test"
-passphrase = "test"
-flag = '1'  # 模拟盘 demo trading
-# flag = '0'  # 实盘 real trading
+# demo api
+# api_key = "70368fc1-a4ac-4bc0-91cc-3bab2f0af791"
+# secret_key = "32E60FAFE3D61931779C46B049AD618D"
+# passphrase = "Fan@121216"
+
+# real api
+api_key = "30d56652-3a4d-49c2-a14e-4a00c343d567"
+secret_key = "A74B2B30E721C90168489A103CE5FBC7"
+passphrase = "Fan@121216"
+# flag = '1'  # 模拟盘 demo trading
+flag = '0'  # 实盘 real trading
 
 # 格式化日志
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
@@ -322,6 +328,54 @@ def order():
     logging.info("参数打印:")
     logging.info(_params)
     return  res
+# 现货订单
+@app.route('/spot_order', methods=['POST'])
+def spot_order():
+    _params = request.json
+    print(_params)
+    ret = {
+        "statusCode": 2000,
+        "msg": "操作成功"
+    }
+    if "apiSec" not in _params or _params["apiSec"] != apiSec:
+        ret['msg'] = "Permission Denied."
+        ret["statusCode"] = 2001
+        return ret
+    if "symbol" not in _params or _params["symbol"] == '':
+        ret['msg'] = "symbol参数不正确"
+        ret["statusCode"] = 2002
+        return ret
+    if "amount" not in _params or _params["amount"] == '':
+        ret['msg'] = "amount参数不正确"
+        ret["statusCode"] = 2003
+        return ret
+    if "type" not in _params or _params["type"] == '':
+        ret['msg'] = "type参数不正确"
+        ret["statusCode"] = 2004
+        return ret
+    _instId = _params["symbol"]
+    _orderType = _params["type"]
+    _side = _params["side"]
+    _sz = _params["amount"]
+    if(_orderType == "limit"):
+        _px = _params["price"]
+    else:
+        _px = None
+    print("准备交易")
+    if(_side == "sell"):
+        print("sell")
+        result = tradeAPI.get_fills(instType="SPOT",instId=_instId,limit=1)
+        print(result)
+        if(result["data"][0]["side"]=="buy"):
+            sz = result["data"][0]["fillSz"]
+            print(round(float(sz),1))
+            ret["msg"] = tradeAPI.place_order(_instId,"cash","sell",_orderType,round(float(sz),1),px=_px)
+        return ret
+    else:
+        print("buy")
+        res = tradeAPI.place_order(_instId,"cash",_side,_orderType,_sz,px=_px)
+        ret["msg"]=res
+    return ret
 
 if __name__ == '__main__':
     try:
