@@ -1,4 +1,6 @@
 import re
+from binance.binance_exchange import BinanceExchange
+from binance.trade_api import BinanceTradeApi
 import okx.Account_api as Account
 import okx.Funding_api as Funding
 import okx.Market_api as Market
@@ -39,12 +41,19 @@ apiSec = config['service']['api_sec']
 # secret_key = "32E60FAFE3D61931779C46B049AD618D"
 # passphrase = "Fan@121216"
 
-# real api
+#okx real api
 api_key = "30d56652-3a4d-49c2-a14e-4a00c343d567"
 secret_key = "A74B2B30E721C90168489A103CE5FBC7"
 passphrase = "Fan@121216"
 # flag = '1'  # 模拟盘 demo trading
 flag = '0'  # 实盘 real trading
+# binance api 
+binance_api_key = "df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab"
+binance_secret_key = "6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d"
+
+# 币安交易所初始化
+binanceClient = BinanceExchange(apiKey=binance_api_key,secret=binance_secret_key).client()
+binanceClient.set_sandbox_mode(True)
 
 # 格式化日志
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
@@ -246,40 +255,44 @@ def start_trade():
         _px = None
     _tdMode = _params["tdMode"]
     _level = _params["level"]
+    _exchange = _params["exchange"]
     # 开仓
     logging.info("准备开仓")
-    global lastOrdType
-    if _params['side'].lower() in ["buy", "sell"]:
-        # 取消未成交的订单(一般订单和策略订单)
-        cancel_pending_orders(_instId,"oco")
-        # 市价平仓
-        close_position(_instId,_tdMode)
-        # 设置持仓模式
-        posModeRes = accountAPI.set_position_mode("net_mode")
-        logging.info("设置账户的持仓模式:")
-        logging.info(posModeRes)
-        # 开仓的杠杆倍数
-        setLevelRes = accountAPI.set_leverage(instId=_instId, lever=_level, mgnMode=_tdMode)
-        logging.info("开的杠杆倍数:")
-        logging.info(setLevelRes)
-        # 币张转换
-        converRes =  publicAPI.amount_sz_convert(1,_instId,_sz)
-        logging.info(converRes)
-        sz = converRes["data"][0]["sz"]
-        logging.info("币张转换:")
-        if int(sz) < 1:
-            res['msg'] = 'Amount is too small. Please increase amount.'
-        else:
-            # 下单
-            orderRes = tradeAPI.place_order(instId=_instId,tdMode= _tdMode,side= _side,ordType= _orderType,sz= sz,px=_px)
-            logging.info("下单信息：")
-            logging.info(orderRes)
-            lastOrderId = orderRes["data"][0]["ordId"]
-            res['msg'] = orderRes
-            # 设置止盈止损
-            if _params['enable_stop_loss'] and _params['enable_stop_gain']:
-                set_tp_or_slOrd(_params,sz,lastOrderId)
-                lastOrdType = _params['side']
+    if(_exchange == "okx"):
+        if _params['side'].lower() in ["buy", "sell"]:
+            # 取消未成交的订单(一般订单和策略订单)
+            cancel_pending_orders(_instId,"oco")
+            # 市价平仓
+            close_position(_instId,_tdMode)
+            # 设置持仓模式
+            posModeRes = accountAPI.set_position_mode("net_mode")
+            logging.info("设置账户的持仓模式:")
+            logging.info(posModeRes)
+            # 开仓的杠杆倍数
+            setLevelRes = accountAPI.set_leverage(instId=_instId, lever=_level, mgnMode=_tdMode)
+            logging.info("开的杠杆倍数:")
+            logging.info(setLevelRes)
+            # 币张转换
+            converRes =  publicAPI.amount_sz_convert(1,_instId,_sz)
+            logging.info(converRes)
+            sz = converRes["data"][0]["sz"]
+            logging.info("币张转换:")
+            if int(sz) < 1:
+                res['msg'] = 'Amount is too small. Please increase amount.'
+            else:
+                # 下单
+                orderRes = tradeAPI.place_order(instId=_instId,tdMode= _tdMode,side= _side,ordType= _orderType,sz= sz,px=_px)
+                logging.info("下单信息：")
+                logging.info(orderRes)
+                lastOrderId = orderRes["data"][0]["ordId"]
+                res['msg'] = orderRes
+                # 设置止盈止损
+                if _params['enable_stop_loss'] and _params['enable_stop_gain']:
+                    set_tp_or_slOrd(_params,sz,lastOrderId)
+    elif(_exchange == "binance"):
+        binanceExchange = BinanceTradeApi()
+        res['msg'] =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+    
     return res
 
 # 接收post请求-撤单
@@ -380,7 +393,7 @@ def spot_order():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run()
+        app.run(debug=True)
     except Exception as e:
         logging.info(e)
         pass

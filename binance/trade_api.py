@@ -27,6 +27,7 @@ class BinanceTradeApi:
             print(e)
         res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
         print(res)
+        return res
 
     # 市价平仓
     def close_positions(self,exchange,symbol):

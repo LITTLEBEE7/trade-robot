@@ -487,3 +487,66 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.okx.com', port
  * Running on http://127.0.0.1:5000
 2022/11/22/ 21:34:42 PM - INFO - [33mPress CTRL+C to quit[0m
 2022/11/22/ 21:34:52 PM - INFO - 127.0.0.1 - - [22/Nov/2022 21:34:52] "POST /spot_order HTTP/1.1" 200 -
+2022/11/24/ 12:57:41 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/24/ 12:57:41 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/24/ 13:01:25 PM - INFO - 请求参数：
+2022/11/24/ 13:01:25 PM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': 'BTCUSDT', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '5', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/24/ 13:01:25 PM - INFO - 准备开仓
+2022/11/24/ 13:01:25 PM - ERROR - Exception on /trade [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 294, in start_trade
+    res['msg'] =  binanceExchange.palce_order(exchange=_exchange,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+  File "/Users/myway/Desktop/trade_robot_new/binance/trade_api.py", line 6, in palce_order
+    cancelRes = exchange.cancel_all_orders(symbol)
+AttributeError: 'str' object has no attribute 'cancel_all_orders'
+2022/11/24/ 13:01:25 PM - INFO - 127.0.0.1 - - [24/Nov/2022 13:01:25] "[35m[1mPOST /trade HTTP/1.1[0m" 500 -
+2022/11/24/ 13:02:14 PM - INFO - 请求参数：
+2022/11/24/ 13:02:14 PM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '5', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/24/ 13:02:14 PM - INFO - 准备开仓
+2022/11/24/ 13:02:14 PM - ERROR - Exception on /trade [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/myway/Desktop/trade_robot_new/trade_okx.py", line 294, in start_trade
+    res['msg'] =  binanceExchange.palce_order(exchange=_exchange,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+  File "/Users/myway/Desktop/trade_robot_new/binance/trade_api.py", line 6, in palce_order
+    cancelRes = exchange.cancel_all_orders(symbol)
+AttributeError: 'str' object has no attribute 'cancel_all_orders'
+2022/11/24/ 13:02:14 PM - INFO - 127.0.0.1 - - [24/Nov/2022 13:02:14] "[35m[1mPOST /trade HTTP/1.1[0m" 500 -
+2022/11/24/ 13:02:43 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/11/24/ 13:02:43 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/24/ 13:02:43 PM - INFO -  * Restarting with stat
+2022/11/24/ 13:02:43 PM - WARNING -  * Debugger is active!
+2022/11/24/ 13:02:43 PM - INFO -  * Debugger PIN: 542-706-706
+2022/11/24/ 13:02:48 PM - INFO - 请求参数：
+2022/11/24/ 13:02:48 PM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '5', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/24/ 13:02:48 PM - INFO - 准备开仓
+2022/11/24/ 13:02:48 PM - INFO - 127.0.0.1 - - [24/Nov/2022 13:02:48] "[35m[1mPOST /trade HTTP/1.1[0m" 500 -
+2022/11/24/ 13:05:51 PM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/trade_okx.py', reloading
+2022/11/24/ 13:05:51 PM - INFO -  * Restarting with stat
+2022/11/24/ 13:05:52 PM - WARNING -  * Debugger is active!
+2022/11/24/ 13:05:52 PM - INFO -  * Debugger PIN: 542-706-706
+2022/11/24/ 13:06:28 PM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/trade_okx.py', reloading
+2022/11/24/ 13:06:28 PM - INFO -  * Restarting with stat
+2022/11/24/ 13:06:28 PM - WARNING -  * Debugger is active!
+2022/11/24/ 13:06:28 PM - INFO -  * Debugger PIN: 542-706-706
+2022/11/24/ 13:06:35 PM - INFO - 请求参数：
+2022/11/24/ 13:06:35 PM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '5', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/24/ 13:06:35 PM - INFO - 准备开仓
+2022/11/24/ 13:06:47 PM - INFO - 127.0.0.1 - - [24/Nov/2022 13:06:47] "POST /trade HTTP/1.1" 200 -
