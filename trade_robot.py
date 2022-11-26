@@ -36,37 +36,33 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-# demo api
-# api_key = "70368fc1-a4ac-4bc0-91cc-3bab2f0af791"
-# secret_key = "32E60FAFE3D61931779C46B049AD618D"
-# passphrase = "Fan@121216"
-
 #okx real api
-api_key = "30d56652-3a4d-49c2-a14e-4a00c343d567"
-secret_key = "A74B2B30E721C90168489A103CE5FBC7"
-passphrase = "Fan@121216"
+api_key = config["okxExchange"]['api_key']
+secret_key = config["okxExchange"]['secret_key']
+passphrase = config["okxExchange"]['passphrase']
 # flag = '1'  # 模拟盘 demo trading
 flag = '0'  # 实盘 real trading
 # binance api 
-binance_api_key = "df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab"
-binance_secret_key = "6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d"
+binance_api_key = config["binanceExchange"]["binance_api_key"]
+binance_secret_key = config["binanceExchange"]["binance_secret_key"]
 
 # 币安交易所初始化
 binanceClient = BinanceExchange(apiKey=binance_api_key,secret=binance_secret_key).client()
+# 是否是测试环境
 binanceClient.set_sandbox_mode(True)
 
 # 格式化日志
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%Y/%m/%d/ %H:%M:%S %p"
-logging.basicConfig(filename='okx_trade.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT)
+logging.basicConfig(filename='my_trade.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT)
 
-# account api
+# okx account api
 accountAPI = Account.AccountAPI(api_key, secret_key, passphrase, False, flag)
-# trade api
+# okx trade api
 tradeAPI = Trade.TradeAPI(api_key, secret_key, passphrase, False, flag)
-# funding api
+#okx funding api
 fundingAPI = Funding.FundingAPI(api_key, secret_key, passphrase, False, flag)
-# public api
+# okx public api
 publicAPI = Public.PublicAPI(api_key, secret_key, passphrase, False, flag)
 
 
@@ -257,8 +253,10 @@ def start_trade():
     _level = _params["level"]
     _exchange = _params["exchange"]
     # 开仓
+    # okx交易所
     logging.info("准备开仓")
     if(_exchange == "okx"):
+        logging.info("okx交易所")
         if _params['side'].lower() in ["buy", "sell"]:
             # 取消未成交的订单(一般订单和策略订单)
             cancel_pending_orders(_instId,"oco")
@@ -289,9 +287,13 @@ def start_trade():
                 # 设置止盈止损
                 if _params['enable_stop_loss'] and _params['enable_stop_gain']:
                     set_tp_or_slOrd(_params,sz,lastOrderId)
+    # 币安交易所
     elif(_exchange == "binance"):
+        logging.info("币安交易所")
         binanceExchange = BinanceTradeApi()
         res['msg'] =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+    else:
+        res['msg']="交易所不存在"
     
     return res
 
@@ -393,7 +395,7 @@ def spot_order():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run(debug=True)
+        app.run()
     except Exception as e:
         logging.info(e)
         pass
