@@ -36,14 +36,14 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab"
-secret_key = "6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d"
+api_key = "test"
+secret_key = "test"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
 # 币安交易所初始化
 client = BinanceExchange(apiKey=api_key,secret=secret_key).client()
-client.set_sandbox_mode(True)
+# client.set_sandbox_mode(True)
 
 # 下单
 def palce_order(exchange,symbol,type,side,amount,level,tdMode,price):
@@ -87,6 +87,13 @@ def close_positions(exchange,symbol):
     except Exception as e:
         print(e)
 
+def current_positions(exchange,symbol):
+    positions = exchange.fetch_positions(symbol)
+    print(positions)
+
 # symbol,type,side,amount,level,tdMode,price
-# exchange = BinanceTradeApi()
-# exchange.palce_order(client,symbol="BTCUSDT",type="market",side="sell",amount="0.1",level="3",tdMode="isolated",price="")
+# palce_order(client,symbol="BTCUSDT",type="market",side="sell",amount="0.001",level="1",tdMode="isolated",price="")
+# 平仓
+# close_positions(client,"BTCUSDT")
+# 当前的仓位
+current_positions(client,["BTCUSDT"])

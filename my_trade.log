@@ -1,36 +1,69 @@
-
-2022/11/26/ 10:46:39 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/trade_robot.py', reloading
-2022/11/26/ 10:46:39 AM - INFO -  * Restarting with stat
-2022/11/26/ 10:46:39 AM - WARNING -  * Debugger is active!
-2022/11/26/ 10:46:39 AM - INFO -  * Debugger PIN: 542-706-706
-2022/11/26/ 10:46:47 AM - INFO - 请求参数：
-2022/11/26/ 10:46:47 AM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '3', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
-2022/11/26/ 10:46:47 AM - INFO - okx交易所
-2022/11/26/ 10:46:47 AM - INFO - 准备开仓
-2022/11/26/ 10:46:47 AM - INFO - 币安交易所
-2022/11/26/ 10:46:52 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/11/26/ 10:46:57 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '3', 'maxNotionalValue': '200000000'}
-2022/11/26/ 10:46:58 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/11/26/ 10:46:59 AM - INFO - 设置持仓模式异常信息:
-2022/11/26/ 10:46:59 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/11/26/ 10:47:00 AM - INFO - 下单结果信息:
-2022/11/26/ 10:47:00 AM - INFO - {'info': {'orderId': '3256174831', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcuc72c94ad1b85b4806af4b7', 'price': '0', 'avgPrice': '16632.30000', 'origQty': '0.100', 'executedQty': '0.100', 'cumQty': '0.100', 'cumQuote': '1663.23000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1669430822107'}, 'id': '3256174831', 'clientOrderId': 'x-xcKtGhcuc72c94ad1b85b4806af4b7', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16632.3, 'stopPrice': None, 'amount': 0.1, 'cost': 1663.23, 'average': 16632.3, 'filled': 0.1, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
-2022/11/26/ 10:47:00 AM - INFO - 127.0.0.1 - - [26/Nov/2022 10:47:00] "POST /trade HTTP/1.1" 200 -
-2022/11/26/ 10:48:10 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/trade_robot.py', reloading
-2022/11/26/ 10:48:10 AM - INFO -  * Restarting with stat
-2022/11/26/ 10:48:10 AM - WARNING -  * Debugger is active!
-2022/11/26/ 10:48:10 AM - INFO -  * Debugger PIN: 542-706-706
-2022/11/26/ 10:48:25 AM - INFO - 请求参数：
-2022/11/26/ 10:48:25 AM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '3', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
-2022/11/26/ 10:48:25 AM - INFO - 准备开仓
-2022/11/26/ 10:48:25 AM - INFO - 币安交易所
-2022/11/26/ 10:48:30 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/11/26/ 10:48:36 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '3', 'maxNotionalValue': '200000000'}
-2022/11/26/ 10:48:37 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/11/26/ 10:48:38 AM - INFO - 设置持仓模式异常信息:
-2022/11/26/ 10:48:38 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/11/26/ 10:48:39 AM - INFO - 下单结果信息:
-2022/11/26/ 10:48:39 AM - INFO - {'info': {'orderId': '3256175286', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcuc7173f3e36e5dec1adfb75', 'price': '0', 'avgPrice': '16632.20000', 'origQty': '0.100', 'executedQty': '0.100', 'cumQty': '0.100', 'cumQuote': '1663.22000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1669430921102'}, 'id': '3256175286', 'clientOrderId': 'x-xcKtGhcuc7173f3e36e5dec1adfb75', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16632.2, 'stopPrice': None, 'amount': 0.1, 'cost': 1663.22, 'average': 16632.2, 'filled': 0.1, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
-2022/11/26/ 10:48:39 AM - INFO - 127.0.0.1 - - [26/Nov/2022 10:48:39] "POST /trade HTTP/1.1" 200 -
-2022/11/26/ 10:50:48 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/trade_robot.py', reloading
-2022/11/26/ 10:50:49 AM - INFO -  * Restarting with stat
+2022/11/26/ 11:16:39 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/trade_robot.py', reloading
+2022/11/26/ 11:16:39 AM - INFO -  * Restarting with stat
+2022/11/26/ 11:16:39 AM - WARNING -  * Debugger is active!
+2022/11/26/ 11:16:39 AM - INFO -  * Debugger PIN: 542-706-706
+2022/11/26/ 11:16:46 AM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2022/11/26/ 11:16:46 AM - INFO - [33mPress CTRL+C to quit[0m
+2022/11/26/ 11:16:46 AM - INFO -  * Restarting with stat
+2022/11/26/ 11:16:46 AM - WARNING -  * Debugger is active!
+2022/11/26/ 11:16:46 AM - INFO -  * Debugger PIN: 542-706-706
+2022/11/26/ 11:17:03 AM - INFO - 请求参数：
+2022/11/26/ 11:17:03 AM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '3', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/26/ 11:17:03 AM - INFO - 准备开仓
+2022/11/26/ 11:17:03 AM - INFO - 币安交易所
+2022/11/26/ 11:17:08 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/11/26/ 11:17:12 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '3', 'maxNotionalValue': '200000000'}
+2022/11/26/ 11:17:14 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/11/26/ 11:17:15 AM - INFO - 设置持仓模式异常信息:
+2022/11/26/ 11:17:15 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/11/26/ 11:17:17 AM - INFO - 下单结果信息:
+2022/11/26/ 11:17:17 AM - INFO - {'info': {'orderId': '3256182075', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcube277120443fca4a8bea3c', 'price': '0', 'avgPrice': '16617.00000', 'origQty': '0.100', 'executedQty': '0.100', 'cumQty': '0.100', 'cumQuote': '1661.70000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1669432637852'}, 'id': '3256182075', 'clientOrderId': 'x-xcKtGhcube277120443fca4a8bea3c', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16617.0, 'stopPrice': None, 'amount': 0.1, 'cost': 1661.7, 'average': 16617.0, 'filled': 0.1, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/11/26/ 11:17:17 AM - INFO - 127.0.0.1 - - [26/Nov/2022 11:17:17] "POST /trade HTTP/1.1" 200 -
+2022/11/26/ 11:17:54 AM - INFO - 请求参数：
+2022/11/26/ 11:17:54 AM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/26/ 11:17:54 AM - INFO - 准备开仓
+2022/11/26/ 11:17:54 AM - INFO - 币安交易所
+2022/11/26/ 11:17:55 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/11/26/ 11:18:00 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2022/11/26/ 11:18:01 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/11/26/ 11:18:03 AM - INFO - 设置持仓模式异常信息:
+2022/11/26/ 11:18:03 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/11/26/ 11:18:04 AM - INFO - 下单结果信息:
+2022/11/26/ 11:18:04 AM - INFO - {'info': {'orderId': '3256182282', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcu112825bf575a60d2ccf242', 'price': '0', 'avgPrice': '16625.90000', 'origQty': '0.100', 'executedQty': '0.100', 'cumQty': '0.100', 'cumQuote': '1662.59000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1669432685073'}, 'id': '3256182282', 'clientOrderId': 'x-xcKtGhcu112825bf575a60d2ccf242', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16625.9, 'stopPrice': None, 'amount': 0.1, 'cost': 1662.59, 'average': 16625.9, 'filled': 0.1, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/11/26/ 11:18:04 AM - INFO - 127.0.0.1 - - [26/Nov/2022 11:18:04] "POST /trade HTTP/1.1" 200 -
+2022/11/26/ 11:18:18 AM - INFO - 请求参数：
+2022/11/26/ 11:18:18 AM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/26/ 11:18:18 AM - INFO - 准备开仓
+2022/11/26/ 11:18:18 AM - INFO - 币安交易所
+2022/11/26/ 11:18:19 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/11/26/ 11:18:22 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2022/11/26/ 11:18:23 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/11/26/ 11:18:25 AM - INFO - 设置持仓模式异常信息:
+2022/11/26/ 11:18:25 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/11/26/ 11:18:25 AM - INFO - 127.0.0.1 - - [26/Nov/2022 11:18:25] "[35m[1mPOST /trade HTTP/1.1[0m" 500 -
+2022/11/26/ 11:20:13 AM - INFO - 请求参数：
+2022/11/26/ 11:20:13 AM - INFO - {'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.001', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': 'binance'}
+2022/11/26/ 11:20:13 AM - INFO - 准备开仓
+2022/11/26/ 11:20:13 AM - INFO - 币安交易所
+2022/11/26/ 11:20:14 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/11/26/ 11:20:17 AM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2022/11/26/ 11:20:19 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2022/11/26/ 11:20:20 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/11/26/ 11:20:21 AM - INFO - 设置持仓模式异常信息:
+2022/11/26/ 11:20:21 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/11/26/ 11:20:22 AM - INFO - 下单结果信息:
+2022/11/26/ 11:20:22 AM - INFO - {'info': {'orderId': '3256182828', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcu63c3d333af011b4404c763', 'price': '0', 'avgPrice': '16624.60000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '16.62460', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1669432823551'}, 'id': '3256182828', 'clientOrderId': 'x-xcKtGhcu63c3d333af011b4404c763', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16624.6, 'stopPrice': None, 'amount': 0.001, 'cost': 16.6246, 'average': 16624.6, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/11/26/ 11:20:22 AM - INFO - 127.0.0.1 - - [26/Nov/2022 11:20:22] "POST /trade HTTP/1.1" 200 -
+2022/11/26/ 11:40:29 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/test.py', reloading
+2022/11/26/ 11:40:29 AM - INFO -  * Restarting with stat
+2022/11/26/ 11:40:29 AM - WARNING -  * Debugger is active!
+2022/11/26/ 11:40:29 AM - INFO -  * Debugger PIN: 542-706-706
+2022/11/26/ 11:40:34 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/test.py', reloading
+2022/11/26/ 11:40:34 AM - INFO -  * Restarting with stat
+2022/11/26/ 11:40:35 AM - WARNING -  * Debugger is active!
+2022/11/26/ 11:40:35 AM - INFO -  * Debugger PIN: 542-706-706
+2022/11/26/ 11:42:58 AM - INFO -  * Detected change in '/Users/myway/Desktop/trade_robot_new/test.py', reloading
+2022/11/26/ 11:42:58 AM - INFO -  * Restarting with stat
+2022/11/26/ 11:42:58 AM - WARNING -  * Debugger is active!
+2022/11/26/ 11:42:58 AM - INFO -  * Debugger PIN: 542-706-706

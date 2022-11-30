@@ -395,7 +395,7 @@ def spot_order():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run()
+        app.run(port=8000, debug=True)
     except Exception as e:
         logging.info(e)
         pass
