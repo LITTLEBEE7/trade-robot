@@ -49,7 +49,7 @@ binance_secret_key = config["binanceExchange"]["binance_secret_key"]
 # 币安交易所初始化
 binanceClient = BinanceExchange(apiKey=binance_api_key,secret=binance_secret_key).client()
 # 是否是测试环境
-binanceClient.set_sandbox_mode(True)
+# binanceClient.set_sandbox_mode(True)
 
 # 格式化日志
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
