@@ -243,7 +243,7 @@ def start_trade():
             logging.info("币安交易所")
             binanceClient = BinanceExchange(apiKey=api_key,secret=secret_key).client()
             # 是否是测试环境
-            # binanceClient.set_sandbox_mode(True)
+            binanceClient.set_sandbox_mode(True)
             binanceExchange = BinanceTradeApi()
             res['msg'] =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
         except Exception as e:
@@ -259,7 +259,7 @@ def start_trade():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run(port=8000, debug=True)
+        app.run(port=5000)
     except Exception as e:
         logging.info(e)
         pass

@@ -4,10 +4,14 @@
 # 并行的工作进程数
 import multiprocessing
 import os
+import sys
+
+print("参数打印")
+print(sys.argv)
 
 currentPath = os.getcwd().replace('\\','/')
-# workers = 4
-workers = multiprocessing.cpu_count()*2+1
+workers = 1
+# workers = multiprocessing.cpu_count()*2+1
 # 指定每个工作者的线程数
 threads = 2
 # 监听内网的端口
