@@ -1,22 +1,249 @@
-2022/12/04/ 11:22:29 AM - INFO - 请求参数：
-2022/12/04/ 11:22:29 AM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.11', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': 'df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab', 'secret_key': '6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d', 'passphrase': ''}}
-2022/12/04/ 11:22:29 AM - INFO - 准备开仓
-2022/12/04/ 11:22:29 AM - INFO - 币安交易所
-2022/12/04/ 11:22:31 AM - INFO - binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
-2022/12/04/ 11:23:06 AM - INFO - 请求参数：
-2022/12/04/ 11:23:06 AM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.11', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': 'df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab', 'secret_key': '6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d', 'passphrase': ''}}
-2022/12/04/ 11:23:06 AM - INFO - 准备开仓
-2022/12/04/ 11:23:06 AM - INFO - 币安交易所
-2022/12/04/ 11:23:11 AM - INFO - binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
-2022/12/04/ 11:25:55 AM - INFO - 请求参数：
-2022/12/04/ 11:25:55 AM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.11', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': 'df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab', 'secret_key': '6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d', 'passphrase': ''}}
-2022/12/04/ 11:25:55 AM - INFO - 准备开仓
-2022/12/04/ 11:25:55 AM - INFO - 币安交易所
-2022/12/04/ 11:26:00 AM - INFO - binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
-2022/12/04/ 11:26:56 AM - INFO - 请求参数：
-2022/12/04/ 11:26:56 AM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.11', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': 'df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab', 'secret_key': '6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d', 'passphrase': ''}}
-2022/12/04/ 11:26:56 AM - INFO - 准备开仓
-2022/12/04/ 11:26:56 AM - INFO - 币安交易所
-2022/12/04/ 11:27:00 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/12/04/ 11:27:01 AM - INFO - binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
-2022/12/04/ 11:27:02 AM - INFO - binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2022/12/05/ 19:33:01 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/12/05/ 19:33:01 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/05/ 19:33:34 PM - INFO - 请求参数：
+2022/12/05/ 19:33:34 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '10', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'binance', 'api_key': 'df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab', 'secret_key': '6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d', 'passphrase': ''}}
+2022/12/05/ 19:33:34 PM - INFO - 准备开仓
+2022/12/05/ 19:33:34 PM - INFO - 币安交易所
+2022/12/05/ 19:33:39 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/05/ 19:33:43 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2022/12/05/ 19:33:45 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/05/ 19:33:46 PM - INFO - {'code': '200', 'msg': 'success'}
+2022/12/05/ 19:33:48 PM - INFO - 设置持仓模式异常信息:
+2022/12/05/ 19:33:48 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/12/05/ 19:33:48 PM - INFO - 下单结果信息:
+2022/12/05/ 19:33:49 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:33:49] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:34:03 PM - INFO - 请求参数：
+2022/12/05/ 19:34:03 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTCUSDT', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'binance', 'api_key': 'df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab', 'secret_key': '6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d', 'passphrase': ''}}
+2022/12/05/ 19:34:03 PM - INFO - 准备开仓
+2022/12/05/ 19:34:03 PM - INFO - 币安交易所
+2022/12/05/ 19:34:06 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/05/ 19:34:09 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2022/12/05/ 19:34:10 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/05/ 19:34:12 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/12/05/ 19:34:13 PM - INFO - 设置持仓模式异常信息:
+2022/12/05/ 19:34:13 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/12/05/ 19:34:13 PM - INFO - 下单结果信息:
+2022/12/05/ 19:34:14 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:34:14] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:39:02 PM - INFO - 请求参数：
+2022/12/05/ 19:39:02 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:39:02 PM - INFO - 准备开仓
+2022/12/05/ 19:39:02 PM - INFO - okx交易所
+2022/12/05/ 19:39:07 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:39:07 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:39:07 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:39:10 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:39:10 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:39:10 PM - INFO - net_mode
+2022/12/05/ 19:39:10 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:39:13 PM - INFO - {'code': '51023', 'data': [], 'msg': 'Position does not exist.'}
+2022/12/05/ 19:39:15 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:39:15 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:39:17 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:39:17 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:39:20 PM - INFO - 币张转换:
+2022/12/05/ 19:39:20 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '100', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:39:22 PM - INFO - 下单信息：
+2022/12/05/ 19:39:22 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'ordId': '519961001622601728', 'sCode': '0', 'sMsg': 'Order successfully placed', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:39:22 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:39:22] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:39:46 PM - INFO - 请求参数：
+2022/12/05/ 19:39:46 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '10', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:39:46 PM - INFO - 准备开仓
+2022/12/05/ 19:39:46 PM - INFO - okx交易所
+2022/12/05/ 19:39:50 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:39:50 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:39:50 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:39:53 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:39:53 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:39:53 PM - INFO - net_mode
+2022/12/05/ 19:39:53 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:39:55 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'instId': 'BTC-USDT-SWAP', 'posSide': 'net', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:39:58 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:39:58 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:40:00 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:40:00 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:40:03 PM - INFO - 币张转换:
+2022/12/05/ 19:40:03 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '10000', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:40:05 PM - INFO - 下单信息：
+2022/12/05/ 19:40:05 PM - INFO - {'code': '1', 'data': [{'clOrdId': '', 'ordId': '', 'sCode': '51008', 'sMsg': 'Order failed. Insufficient USDT margin in account ', 'tag': ''}], 'msg': 'Operation failed.'}
+2022/12/05/ 19:40:05 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:40:05] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:44:00 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/12/05/ 19:44:00 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/05/ 19:44:07 PM - INFO - 请求参数：
+2022/12/05/ 19:44:07 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '10', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:44:07 PM - INFO - 准备开仓
+2022/12/05/ 19:44:07 PM - INFO - okx交易所
+2022/12/05/ 19:44:12 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:44:12 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:44:12 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:44:14 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:44:14 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:44:14 PM - INFO - net_mode
+2022/12/05/ 19:44:14 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:44:16 PM - INFO - {'code': '51023', 'data': [], 'msg': 'Position does not exist.'}
+2022/12/05/ 19:44:18 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:44:18 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:44:21 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:44:21 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:44:23 PM - INFO - 币张转换:
+2022/12/05/ 19:44:23 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '10000', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:44:25 PM - INFO - 下单信息：
+2022/12/05/ 19:44:25 PM - INFO - {'code': '1', 'data': [{'clOrdId': '', 'ordId': '', 'sCode': '51008', 'sMsg': 'Order failed. Insufficient USDT margin in account ', 'tag': ''}], 'msg': 'Operation failed.'}
+2022/12/05/ 19:44:25 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:44:25] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:46:48 PM - INFO - 请求参数：
+2022/12/05/ 19:46:48 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:46:48 PM - INFO - 准备开仓
+2022/12/05/ 19:46:48 PM - INFO - okx交易所
+2022/12/05/ 19:46:53 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:46:53 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:46:53 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:46:55 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:46:55 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:46:55 PM - INFO - net_mode
+2022/12/05/ 19:46:55 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:46:58 PM - INFO - {'code': '51023', 'data': [], 'msg': 'Position does not exist.'}
+2022/12/05/ 19:47:00 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:47:00 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:47:02 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:47:02 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:47:05 PM - INFO - 币张转换:
+2022/12/05/ 19:47:05 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '100', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:47:07 PM - INFO - 下单信息：
+2022/12/05/ 19:47:07 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'ordId': '519962950862471168', 'sCode': '0', 'sMsg': 'Order successfully placed', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:47:07 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:47:07] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:47:35 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/12/05/ 19:47:35 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/05/ 19:47:42 PM - INFO - 请求参数：
+2022/12/05/ 19:47:42 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:47:42 PM - INFO - 准备开仓
+2022/12/05/ 19:47:42 PM - INFO - okx交易所
+2022/12/05/ 19:47:47 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:47:47 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:47:47 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:47:49 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:47:49 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:47:49 PM - INFO - net_mode
+2022/12/05/ 19:47:49 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:47:52 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'instId': 'BTC-USDT-SWAP', 'posSide': 'net', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:47:54 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:47:54 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:47:57 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:47:57 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:48:00 PM - INFO - 币张转换:
+2022/12/05/ 19:48:00 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '100', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:48:03 PM - INFO - 下单信息：
+2022/12/05/ 19:48:03 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'ordId': '519963182878785536', 'sCode': '0', 'sMsg': 'Order successfully placed', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:48:03 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:48:03] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:50:07 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/12/05/ 19:50:07 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/05/ 19:50:13 PM - INFO - 请求参数：
+2022/12/05/ 19:50:13 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:50:13 PM - INFO - 准备开仓
+2022/12/05/ 19:50:13 PM - INFO - okx交易所
+2022/12/05/ 19:50:18 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:50:18 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:50:18 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:50:20 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:50:20 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:50:20 PM - INFO - net_mode
+2022/12/05/ 19:50:20 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:50:23 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'instId': 'BTC-USDT-SWAP', 'posSide': 'net', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:50:25 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:50:25 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:50:28 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:50:28 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:50:30 PM - INFO - 币张转换:
+2022/12/05/ 19:50:30 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '100', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:50:33 PM - INFO - 下单信息：
+2022/12/05/ 19:50:33 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'ordId': '519963813907628032', 'sCode': '0', 'sMsg': 'Order successfully placed', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:50:33 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:50:33] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:50:48 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022/12/05/ 19:50:48 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/05/ 19:50:53 PM - INFO - 请求参数：
+2022/12/05/ 19:50:53 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '0.1', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:50:53 PM - INFO - 准备开仓
+2022/12/05/ 19:50:53 PM - INFO - okx交易所
+2022/12/05/ 19:50:57 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:50:57 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:50:57 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:51:00 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:51:00 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:51:00 PM - INFO - net_mode
+2022/12/05/ 19:51:00 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:51:02 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'instId': 'BTC-USDT-SWAP', 'posSide': 'net', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:51:04 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:51:04 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:51:07 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:51:07 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:51:09 PM - INFO - 币张转换:
+2022/12/05/ 19:51:09 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '100', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:51:12 PM - INFO - 下单信息：
+2022/12/05/ 19:51:12 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'ordId': '519963977636478976', 'sCode': '0', 'sMsg': 'Order successfully placed', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:51:12 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:51:12] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:51:29 PM - INFO - 请求参数：
+2022/12/05/ 19:51:29 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '10', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:51:29 PM - INFO - 准备开仓
+2022/12/05/ 19:51:29 PM - INFO - okx交易所
+2022/12/05/ 19:51:34 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:51:34 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:51:34 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:51:37 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:51:37 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:51:37 PM - INFO - net_mode
+2022/12/05/ 19:51:37 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:51:39 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'instId': 'BTC-USDT-SWAP', 'posSide': 'net', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:51:42 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:51:42 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:51:44 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:51:44 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:51:47 PM - INFO - 币张转换:
+2022/12/05/ 19:51:47 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '10000', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:51:50 PM - INFO - 下单信息：
+2022/12/05/ 19:51:50 PM - INFO - {'code': '1', 'data': [{'clOrdId': '', 'ordId': '', 'sCode': '51008', 'sMsg': 'Order failed. Insufficient USDT margin in account ', 'tag': ''}], 'msg': 'Operation failed.'}
+2022/12/05/ 19:51:50 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:51:50] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:52:05 PM - INFO - 请求参数：
+2022/12/05/ 19:52:05 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '10', 'type': 'market', 'side': 'oo', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:52:05 PM - INFO - 准备开仓
+2022/12/05/ 19:52:05 PM - INFO - okx交易所
+2022/12/05/ 19:52:10 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:52:10 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:52:10 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:52:12 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:52:12 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:52:12 PM - INFO - net_mode
+2022/12/05/ 19:52:12 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:52:15 PM - INFO - {'code': '51023', 'data': [], 'msg': 'Position does not exist.'}
+2022/12/05/ 19:52:18 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:52:18 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:52:20 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:52:20 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:52:22 PM - INFO - 币张转换:
+2022/12/05/ 19:52:22 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '10000', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:52:25 PM - INFO - 下单信息：
+2022/12/05/ 19:52:25 PM - INFO - {'code': '1', 'data': [{'clOrdId': '', 'ordId': '', 'sCode': '51000', 'sMsg': 'Parameter side  error', 'tag': ''}], 'msg': 'Operation failed.'}
+2022/12/05/ 19:52:25 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:52:25] "POST /trade HTTP/1.1" 200 -
+2022/12/05/ 19:52:41 PM - INFO - 请求参数：
+2022/12/05/ 19:52:41 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '0.1', 'type': 'market', 'side': 'sell', 'price': '', 'tdMode': 'cross', 'level': '10', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
+2022/12/05/ 19:52:41 PM - INFO - 准备开仓
+2022/12/05/ 19:52:41 PM - INFO - okx交易所
+2022/12/05/ 19:52:46 PM - INFO - 当前未成交的订单:
+2022/12/05/ 19:52:46 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:52:46 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
+2022/12/05/ 19:52:48 PM - INFO - {'code': '0', 'data': [{'acctLv': '2', 'autoLoan': False, 'ctIsoMode': 'automatic', 'greeksType': 'PA', 'label': 'mock', 'level': 'Lv1', 'levelTmp': '', 'liquidationGear': '-1', 'mgnIsoMode': 'automatic', 'posMode': 'net_mode', 'roleType': 0, 'spotOffsetType': '', 'traderInsts': [], 'uid': '148380495300960256'}], 'msg': ''}
+2022/12/05/ 19:52:48 PM - INFO - 账户的持仓模式:
+2022/12/05/ 19:52:48 PM - INFO - net_mode
+2022/12/05/ 19:52:48 PM - INFO - 单向模式平仓:
+2022/12/05/ 19:52:51 PM - INFO - {'code': '51023', 'data': [], 'msg': 'Position does not exist.'}
+2022/12/05/ 19:52:54 PM - INFO - 设置账户的持仓模式:
+2022/12/05/ 19:52:54 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
+2022/12/05/ 19:52:56 PM - INFO - 开的杠杆倍数:
+2022/12/05/ 19:52:56 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'cross', 'posSide': ''}], 'msg': ''}
+2022/12/05/ 19:52:59 PM - INFO - 币张转换:
+2022/12/05/ 19:52:59 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '100', 'type': '1', 'unit': 'coin'}], 'msg': ''}
+2022/12/05/ 19:53:01 PM - INFO - 下单信息：
+2022/12/05/ 19:53:01 PM - INFO - {'code': '0', 'data': [{'clOrdId': '', 'ordId': '519964435683835904', 'sCode': '0', 'sMsg': 'Order successfully placed', 'tag': ''}], 'msg': ''}
+2022/12/05/ 19:53:01 PM - INFO - 127.0.0.1 - - [05/Dec/2022 19:53:01] "POST /trade HTTP/1.1" 200 -

@@ -145,8 +145,10 @@ def before_req():
 def start_trade():
     res = {
         "statusCode":2000,
-        "msg":""
-
+        "msg":"订单交易成功",
+        "data":{
+        "orderId":""
+        }
     }
     # 获取请求体
     _params = request.json
@@ -228,8 +230,12 @@ def start_trade():
                 orderRes = tradeAPI.place_order(instId=_instId,tdMode= _tdMode,side= _side,ordType= _orderType,sz= sz,px=_px)
                 logging.info("下单信息：")
                 logging.info(orderRes)
+                if(orderRes["code"]=='0'):
+                    res["data"]["orderId"] = orderRes["data"][0]["ordId"]
+                else:
+                    res["statusCode"] = orderRes["data"][0]["sCode"]
+                    res['msg'] = orderRes["data"][0]["sMsg"]
                 lastOrderId = orderRes["data"][0]["ordId"]
-                res['msg'] = orderRes
                 # 设置止盈止损
                 if _params['enable_stop_loss'] and _params['enable_stop_gain']:
                     set_tp_or_slOrd(tradeAPI,_params,sz,lastOrderId)
@@ -245,7 +251,12 @@ def start_trade():
             # 是否是测试环境
             binanceClient.set_sandbox_mode(True)
             binanceExchange = BinanceTradeApi()
-            res['msg'] =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+            result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+            if(result["code"] == 200):
+                res["data"]["orderId"] = result["msg"]
+            else:
+                res["statusCode"] = result["code"]
+                res['msg'] = result["msg"]
         except Exception as e:
             logging.info(e)
             res["statusCode"] = 2005

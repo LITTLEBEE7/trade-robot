@@ -17,6 +17,7 @@ import configparser
 import urllib.request
 import requests
 from binance.trade_api import BinanceTradeApi
+import json
 
 # 读取设置
 config = {}
@@ -36,17 +37,21 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "test"
-secret_key = "test"
+api_key = "df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab"
+secret_key = "6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
 # 币安交易所初始化
 client = BinanceExchange(apiKey=api_key,secret=secret_key).client()
-# client.set_sandbox_mode(True)
+client.set_sandbox_mode(True)
 
 # 下单
 def palce_order(exchange,symbol,type,side,amount,level,tdMode,price):
+    response = {
+        "code":200,
+        "msg":""
+    }
     # 撤销未完成的订单
     cancelRes = exchange.cancel_all_orders(symbol)
     print(cancelRes)
@@ -70,8 +75,19 @@ def palce_order(exchange,symbol,type,side,amount,level,tdMode,price):
     except Exception as e:
         print("设置持仓模式异常信息:")
         print(e)
-    res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
-    print(res)
+    print("下单结果信息:")
+    try:
+        res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
+        response["msg"] = res["info"]["orderId"]
+    except Exception as e:
+        print("下单异常:")
+        exc = json.loads(str(e.args[0])[7:].strip())
+        print(exc)
+        print(exc["code"])
+        print(exc["msg"])
+        response["code"] = exc["code"]
+        response["msg"]= exc["msg"]
+    return response
 
 # 市价平仓
 def close_positions(exchange,symbol):
@@ -92,8 +108,9 @@ def current_positions(exchange,symbol):
     print(positions)
 
 # symbol,type,side,amount,level,tdMode,price
-# palce_order(client,symbol="BTCUSDT",type="market",side="sell",amount="0.001",level="1",tdMode="isolated",price="")
+res = palce_order(client,symbol="BTCUSDT",type="market",side="buy",amount="10",level="10",tdMode="isolated",price="")
+print(res)
 # 平仓
 # close_positions(client,"BTCUSDT")
 # 当前的仓位
-current_positions(client,["BTCUSDT"])
+# current_positions(client,["BTCUSDT"])

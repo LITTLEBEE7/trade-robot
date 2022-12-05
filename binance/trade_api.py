@@ -1,8 +1,13 @@
 import logging
+import json
 class BinanceTradeApi:
     # 下单
     def palce_order(self,exchange,symbol,type,side,amount,level,tdMode,price):
         # 撤销未完成的订单
+        response = {
+        "code":200,
+        "msg":""
+        }
         cancelRes = exchange.cancel_all_orders(symbol)
         logging.info(cancelRes)
         # 如果账户存在仓位则市价平仓
@@ -25,10 +30,19 @@ class BinanceTradeApi:
         except Exception as e:
             logging.info("设置持仓模式异常信息:")
             logging.info(e)
-        res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
         logging.info("下单结果信息:")
-        logging.info(res)
-        return res
+        try:
+            res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
+            response["msg"] = res["info"]["orderId"]
+        except Exception as e:
+            logging.info("下单异常:")
+            exc = json.loads(str(e.args[0])[7:].strip())
+            logging.info(exc)
+            logging.info(exc["code"])
+            logging.info(exc["msg"])
+            response["code"] = exc["code"]
+            response["msg"]= exc["msg"]
+        return response
 
     # 市价平仓
     def close_positions(self,exchange,symbol):
