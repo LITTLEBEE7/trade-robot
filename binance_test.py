@@ -18,6 +18,7 @@ import urllib.request
 import requests
 from binance.trade_api import BinanceTradeApi
 import json
+import ccxt
 
 # 读取设置
 config = {}
@@ -37,14 +38,19 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "df3b1c52f37a9d983329addd74e539e531286f247fbd01afaeca6899ed9e61ab"
-secret_key = "6b97a974860a309ff524f955e66baf3edd40b3e70544e82115d89c1db9eea73d"
+api_key = "4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL"
+secret_key = "O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
 # 币安交易所初始化
-client = BinanceExchange(apiKey=api_key,secret=secret_key).client()
-client.set_sandbox_mode(True)
+client = ccxt.binance({
+    'enableRateLimit': True,
+    'apiKey': api_key,
+    'secret': secret_key,
+    'options': { 'defaultType': 'future' },
+})
+# client.set_sandbox_mode(True)
 
 # 下单
 def palce_order(exchange,symbol,type,side,amount,level,tdMode,price):
@@ -103,14 +109,28 @@ def close_positions(exchange,symbol):
     except Exception as e:
         print(e)
 
-def current_positions(exchange,symbol):
-    positions = exchange.fetch_positions(symbol)
+def current_positions(symbol):
+    positions = client.fetch_positions(symbol)
     print(positions)
 
+
 # symbol,type,side,amount,level,tdMode,price
-res = palce_order(client,symbol="BTCUSDT",type="market",side="buy",amount="10",level="10",tdMode="isolated",price="")
-print(res)
+# res = palce_order(client,symbol="BTCUSDT",type="market",side="buy",amount="0.001",level="1",tdMode="isolated",price="")
+# print(res)
 # 平仓
-# close_positions(client,"BTCUSDT")
+close_positions(client,"BTCUSDT")
 # 当前的仓位
-# current_positions(client,["BTCUSDT"])
+# current_positions(["BTCUSDT"])
+
+# 获取账户的可用余额
+# balance = client.fetch_balance({"type":"future"})
+# print(balance["total"])
+# print(balance["free"])
+# print(balance["used"])
+
+# cancelResult = client.cancel_all_orders("BTCUSDT")
+# print(cancelResult)
+
+price = client.fetch_ticker("BTCUSDT")
+print(price["info"]["lastPrice"])
+

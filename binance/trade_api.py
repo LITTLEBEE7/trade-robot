@@ -11,7 +11,7 @@ class BinanceTradeApi:
         cancelRes = exchange.cancel_all_orders(symbol)
         logging.info(cancelRes)
         # 如果账户存在仓位则市价平仓
-        self.close_positions(exchange,symbol)
+        # self.close_positions(exchange,symbol)
         # 设置杠杆倍数
         level = exchange.set_leverage(int(level),symbol)
         logging.info(level)

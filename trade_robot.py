@@ -162,8 +162,8 @@ def start_trade():
         res['msg'] = "未设置交易币种对"
         res["statusCode"] = 2002
         return res
-    if "amount" not in _params or _params["amount"] == "":
-        res['msg'] = "未设置交易数量"
+    if "strategy.market_position" not in _params or _params["strategy.market_position"] == "":
+        res['msg'] = "未设置策略的当前位置"
         res["statusCode"] = 2003
         return res
     if "tdMode" not in _params or _params["tdMode"] == "":
@@ -174,6 +174,10 @@ def start_trade():
         res['msg'] = "未设置订单方向"
         res["statusCode"] = 2006
         return res
+    if "position" not in _params or _params["position"] == "":
+        res['msg'] = "未设置仓位比例"
+        res["statusCode"] = 2007
+        return res
     api_key = _params["exchange"]['api_key']
     secret_key = _params["exchange"]['secret_key']
     passphrase = _params["exchange"]['passphrase']
@@ -181,6 +185,8 @@ def start_trade():
     _orderType = _params["type"]
     _side = _params["side"]
     _sz = _params["amount"]
+    _position = float(_params["position"])
+    _strategyPosition = _params["strategy.market_position"]
     if(_orderType == "limit"):
         _px = _params["price"]
     else:
@@ -204,11 +210,31 @@ def start_trade():
         fundingAPI = Funding.FundingAPI(api_key, secret_key, passphrase, False, flag)
         # okx public api
         publicAPI = Public.PublicAPI(api_key, secret_key, passphrase, False, flag)
+        # okx market api
+        marketAPI = Market.MarketAPI(api_key, secret_key, passphrase, False, flag)
         try:
+            if _strategyPosition == "flat":
+                logging.info("开始平仓")
+                close_position(accountAPI,tradeAPI,_instId,_tdMode)
+                res["msg"] = "平仓成功"
+                return res
+
+            #获取用户账户余额
+            balance =  accountAPI.get_account(ccy="USDT")
+            logging.info("账户余额")
+            logging.info(balance)
+            # 可用保证金
+            availEq = balance["data"][0]["details"][0]["availEq"]
+            logging.info("可用保证金")
+            logging.info(availEq)
+            logging.info("当前交易币种的价格")
+            cuttrentPrice =  marketAPI.get_ticker(_instId)["data"][0]["last"]
+            logging.info(cuttrentPrice)
+            _sz = (float(availEq)*_position*int(_level))/float(cuttrentPrice)
             # 取消未成交的订单(一般订单和策略订单)
             cancel_pending_orders(tradeAPI,_instId,"oco")
             # 市价平仓
-            close_position(accountAPI,tradeAPI,_instId,_tdMode)
+            # close_position(accountAPI,tradeAPI,_instId,_tdMode)
             # 设置持仓模式
             posModeRes = accountAPI.set_position_mode("net_mode")
             logging.info("设置账户的持仓模式:")
@@ -251,6 +277,25 @@ def start_trade():
             # 是否是测试环境
             binanceClient.set_sandbox_mode(True)
             binanceExchange = BinanceTradeApi()
+            if _strategyPosition == "flat":
+                binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
+                res["msg"] = "平仓成功"
+                return res
+
+            # 获取账户的可用余额
+            balance = binanceClient.fetch_balance({"type":"future"})
+            freeBal = balance["free"]
+            # 可用保证金
+            logging.info("可用保证金")
+            logging.info(freeBal)
+            logging.info("当前交易币种的价格")
+            price = binanceClient.fetch_ticker(_instId)
+            cuttrentPrice = price["info"]["lastPrice"]
+            logging.info(cuttrentPrice)
+            # 下单数量
+            _amount = (float(freeBal)*_position*int(_level))/float(cuttrentPrice)
+            # 合约最小交易单位为0.001
+            _sz = format(_amount,'.3f')
             result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
             if(result["code"] == 200):
                 res["data"]["orderId"] = result["msg"]
