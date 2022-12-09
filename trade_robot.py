@@ -213,6 +213,10 @@ def start_trade():
         # okx market api
         marketAPI = Market.MarketAPI(api_key, secret_key, passphrase, False, flag)
         try:
+            # 将symbol转换成okx平台需要的symbol
+            _instId = _instId+"-SWAP"
+            logging.info("交易对")
+            logging.info(_instId)
             if _strategyPosition == "flat":
                 logging.info("开始平仓")
                 close_position(accountAPI,tradeAPI,_instId,_tdMode)
@@ -272,19 +276,25 @@ def start_trade():
     # 币安交易所
     elif(_exchange == "binance"):
         try:
+            # 将symbol转换成币安平台需要的symbol
+            _symbolSplit = _instId.upper().split("-")
+            _instId = _symbolSplit[0]+_symbolSplit[1]
+            logging.info("交易对")
+            logging.info(_instId)
             logging.info("币安交易所")
             binanceClient = BinanceExchange(apiKey=api_key,secret=secret_key).client()
             # 是否是测试环境
-            binanceClient.set_sandbox_mode(True)
+            # binanceClient.set_sandbox_mode(True)
             binanceExchange = BinanceTradeApi()
             if _strategyPosition == "flat":
+                logging.info("开始平仓")
                 binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
                 res["msg"] = "平仓成功"
                 return res
 
             # 获取账户的可用余额
             balance = binanceClient.fetch_balance({"type":"future"})
-            freeBal = balance["free"]
+            freeBal = balance["free"]["USDT"]
             # 可用保证金
             logging.info("可用保证金")
             logging.info(freeBal)
@@ -296,6 +306,7 @@ def start_trade():
             _amount = (float(freeBal)*_position*int(_level))/float(cuttrentPrice)
             # 合约最小交易单位为0.001
             _sz = format(_amount,'.3f')
+            logging.info("_sz%s"%(_sz))
             result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
             if(result["code"] == 200):
                 res["data"]["orderId"] = result["msg"]
@@ -315,7 +326,7 @@ def start_trade():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run(port=5000)
+        app.run(port=8000)
     except Exception as e:
         logging.info(e)
         pass

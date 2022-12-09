@@ -37,5 +37,11 @@ marketAPI = Market.MarketAPI(api_key, secret_key, passphrase, False, flag)
 # print(balance["data"][0]["details"][0]["availEq"])
 
 # 获取币种的当前价格
-currentPrice = marketAPI.get_ticker("BTC-USDT-SWAP")["data"][0]["last"]
-print(currentPrice)
+# currentPrice = marketAPI.get_ticker("BTC-USDT-SWAP")["data"][0]["last"]
+# print(currentPrice)
+instId = "BTC-USDT"
+_instId = instId.upper()
+_symbolSplit = _instId.upper().split("-")
+
+print(_symbolSplit[0]+_symbolSplit[1])
+print(instId+"-SWAP")

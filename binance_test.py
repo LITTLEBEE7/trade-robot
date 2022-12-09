@@ -118,19 +118,19 @@ def current_positions(symbol):
 # res = palce_order(client,symbol="BTCUSDT",type="market",side="buy",amount="0.001",level="1",tdMode="isolated",price="")
 # print(res)
 # 平仓
-close_positions(client,"BTCUSDT")
+# close_positions(client,"BTCUSDT")
 # 当前的仓位
 # current_positions(["BTCUSDT"])
 
 # 获取账户的可用余额
-# balance = client.fetch_balance({"type":"future"})
-# print(balance["total"])
-# print(balance["free"])
-# print(balance["used"])
+balance = client.fetch_balance({"type":"future"})
+print(balance["total"])
+print(balance["free"])
+print(balance["used"])
 
 # cancelResult = client.cancel_all_orders("BTCUSDT")
 # print(cancelResult)
 
-price = client.fetch_ticker("BTCUSDT")
-print(price["info"]["lastPrice"])
+# price = client.fetch_ticker("BTCUSDT")
+# print(price["info"]["lastPrice"])
 

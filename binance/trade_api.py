@@ -33,6 +33,7 @@ class BinanceTradeApi:
         logging.info("下单结果信息:")
         try:
             res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
+            logging.info(res)
             response["msg"] = res["info"]["orderId"]
         except Exception as e:
             logging.info("下单异常:")
