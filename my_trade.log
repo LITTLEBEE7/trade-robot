@@ -1,208 +1,149 @@
-2022/12/09/ 18:11:31 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2022/12/09/ 18:11:31 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 18:12:48 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2022/12/09/ 18:12:48 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 18:14:12 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2022/12/09/ 18:14:12 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 18:15:09 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2022/12/16/ 10:42:36 AM - INFO - 请求参数：
+2022/12/16/ 10:42:36 AM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.5', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
+2022/12/16/ 10:42:36 AM - INFO - 准备开仓
+2022/12/16/ 10:42:36 AM - INFO - 交易对
+2022/12/16/ 10:42:36 AM - INFO - BTCUSDT
+2022/12/16/ 10:42:36 AM - INFO - 币安交易所
+2022/12/16/ 10:42:47 AM - INFO - 可用保证金
+2022/12/16/ 10:42:47 AM - INFO - 24.09187093
+2022/12/16/ 10:42:47 AM - INFO - 当前交易币种的价格
+2022/12/16/ 10:42:48 AM - INFO - 17407.30
+2022/12/16/ 10:42:48 AM - INFO - _sz0.007
+2022/12/16/ 10:42:49 AM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/16/ 10:42:50 AM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/16/ 10:42:51 AM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/12/16/ 10:42:52 AM - INFO - 设置持仓模式异常信息:
+2022/12/16/ 10:42:52 AM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/12/16/ 10:42:52 AM - INFO - 下单结果信息:
+2022/12/16/ 10:42:53 AM - INFO - {'info': {'orderId': '99888837693', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qd3716bfa312e83c33d3f73', 'price': '0', 'avgPrice': '17407.40000', 'origQty': '0.007', 'executedQty': '0.007', 'cumQty': '0.007', 'cumQuote': '121.85180', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1671158574477'}, 'id': '99888837693', 'clientOrderId': 'x-FZUXxJ8Qd3716bfa312e83c33d3f73', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 17407.4, 'stopPrice': None, 'amount': 0.007, 'cost': 121.8518, 'average': 17407.4, 'filled': 0.007, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/12/16/ 10:42:53 AM - INFO - 127.0.0.1 - - [16/Dec/2022 10:42:53] "POST /trade HTTP/1.1" 200 -
+2022/12/16/ 10:43:58 AM - INFO - 请求参数：
+2022/12/16/ 10:43:58 AM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.5', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
+2022/12/16/ 10:43:58 AM - INFO - 准备开仓
+2022/12/16/ 10:43:58 AM - INFO - 交易对
+2022/12/16/ 10:43:58 AM - INFO - BTCUSDT
+2022/12/16/ 10:43:58 AM - INFO - 币安交易所
+2022/12/16/ 10:43:58 AM - INFO - 开始平仓
+2022/12/16/ 10:44:10 AM - INFO - 127.0.0.1 - - [16/Dec/2022 10:44:10] "POST /trade HTTP/1.1" 200 -
+2022/12/16/ 21:57:01 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:8000
-2022/12/09/ 18:15:09 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 18:15:22 PM - INFO - 请求参数：
-2022/12/09/ 18:15:22 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT-SWAP', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
-2022/12/09/ 18:15:22 PM - INFO - 准备开仓
-2022/12/09/ 18:15:22 PM - INFO - okx交易所
-2022/12/09/ 18:15:22 PM - INFO - 交易对
-2022/12/09/ 18:15:22 PM - INFO - BTC-USDT-SWAP-SWAP
-2022/12/09/ 18:15:23 PM - INFO - HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/account/balance?ccy=USDT (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107645db0>: Failed to establish a new connection: [Errno 64] Host is down'))
-2022/12/09/ 18:15:23 PM - INFO - 127.0.0.1 - - [09/Dec/2022 18:15:23] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 18:16:24 PM - INFO - 请求参数：
-2022/12/09/ 18:16:24 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
-2022/12/09/ 18:16:24 PM - INFO - 准备开仓
-2022/12/09/ 18:16:24 PM - INFO - okx交易所
-2022/12/09/ 18:16:24 PM - INFO - 交易对
-2022/12/09/ 18:16:24 PM - INFO - BTC-USDT-SWAP
-2022/12/09/ 18:16:27 PM - INFO - 账户余额
-2022/12/09/ 18:16:27 PM - INFO - {'code': '0', 'data': [{'adjEq': '', 'details': [{'availBal': '', 'availEq': '2896.8129033847276', 'cashBal': '2896.8129033847276', 'ccy': 'USDT', 'crossLiab': '', 'disEq': '2896.8129033847276', 'eq': '2896.8129033847276', 'eqUsd': '2896.8129033847276', 'fixedBal': '0', 'frozenBal': '0', 'interest': '', 'isoEq': '0', 'isoLiab': '', 'isoUpl': '0', 'liab': '', 'maxLoan': '', 'mgnRatio': '', 'notionalLever': '0', 'ordFrozen': '0', 'spotInUseAmt': '', 'stgyEq': '0', 'twap': '0', 'uTime': '1670568876914', 'upl': '0', 'uplLiab': ''}], 'imr': '', 'isoEq': '0', 'mgnRatio': '', 'mmr': '', 'notionalUsd': '', 'ordFroz': '', 'totalEq': '48297.88756383071', 'uTime': '1670580988907'}], 'msg': ''}
-2022/12/09/ 18:16:27 PM - INFO - 可用保证金
-2022/12/09/ 18:16:27 PM - INFO - 2896.8129033847276
-2022/12/09/ 18:16:27 PM - INFO - 当前交易币种的价格
-2022/12/09/ 18:16:29 PM - INFO - 17218
-2022/12/09/ 18:16:34 PM - INFO - 当前未成交的订单:
-2022/12/09/ 18:16:34 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
-2022/12/09/ 18:16:34 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
-2022/12/09/ 18:16:36 PM - INFO - 设置账户的持仓模式:
-2022/12/09/ 18:16:36 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
-2022/12/09/ 18:16:39 PM - INFO - 开的杠杆倍数:
-2022/12/09/ 18:16:39 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'isolated', 'posSide': ''}], 'msg': ''}
-2022/12/09/ 18:16:41 PM - INFO - 币张转换:
-2022/12/09/ 18:16:41 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '169', 'type': '1', 'unit': 'coin'}], 'msg': ''}
-2022/12/09/ 18:16:44 PM - INFO - API Request Error(code=50001): Service temporarily unavailable. Please try again later
-2022/12/09/ 18:16:44 PM - INFO - 127.0.0.1 - - [09/Dec/2022 18:16:44] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 18:17:48 PM - INFO - 请求参数：
-2022/12/09/ 18:17:48 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'okx', 'api_key': '70368fc1-a4ac-4bc0-91cc-3bab2f0af791', 'secret_key': '32E60FAFE3D61931779C46B049AD618D', 'passphrase': 'Fan@121216'}}
-2022/12/09/ 18:17:48 PM - INFO - 准备开仓
-2022/12/09/ 18:17:48 PM - INFO - okx交易所
-2022/12/09/ 18:17:48 PM - INFO - 交易对
-2022/12/09/ 18:17:48 PM - INFO - BTC-USDT-SWAP
-2022/12/09/ 18:17:51 PM - INFO - 账户余额
-2022/12/09/ 18:17:51 PM - INFO - {'code': '0', 'data': [{'adjEq': '', 'details': [{'availBal': '', 'availEq': '2896.8129033847276', 'cashBal': '2896.8129033847276', 'ccy': 'USDT', 'crossLiab': '', 'disEq': '2896.8129033847276', 'eq': '2896.8129033847276', 'eqUsd': '2896.8129033847276', 'fixedBal': '0', 'frozenBal': '0', 'interest': '', 'isoEq': '0', 'isoLiab': '', 'isoUpl': '0', 'liab': '', 'maxLoan': '', 'mgnRatio': '', 'notionalLever': '0', 'ordFrozen': '0', 'spotInUseAmt': '', 'stgyEq': '0', 'twap': '0', 'uTime': '1670568876914', 'upl': '0', 'uplLiab': ''}], 'imr': '', 'isoEq': '0', 'mgnRatio': '', 'mmr': '', 'notionalUsd': '', 'ordFroz': '', 'totalEq': '48283.118891161874', 'uTime': '1670581072590'}], 'msg': ''}
-2022/12/09/ 18:17:51 PM - INFO - 可用保证金
-2022/12/09/ 18:17:51 PM - INFO - 2896.8129033847276
-2022/12/09/ 18:17:51 PM - INFO - 当前交易币种的价格
-2022/12/09/ 18:17:53 PM - INFO - 17218
-2022/12/09/ 18:17:58 PM - INFO - 当前未成交的订单:
-2022/12/09/ 18:17:58 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
-2022/12/09/ 18:17:58 PM - INFO - {'code': '0', 'data': [], 'msg': ''}
-2022/12/09/ 18:18:01 PM - INFO - 设置账户的持仓模式:
-2022/12/09/ 18:18:01 PM - INFO - {'code': '0', 'data': [{'posMode': 'net_mode'}], 'msg': ''}
-2022/12/09/ 18:18:03 PM - INFO - 开的杠杆倍数:
-2022/12/09/ 18:18:03 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'lever': '10', 'mgnMode': 'isolated', 'posSide': ''}], 'msg': ''}
-2022/12/09/ 18:18:06 PM - INFO - 币张转换:
-2022/12/09/ 18:18:06 PM - INFO - {'code': '0', 'data': [{'instId': 'BTC-USDT-SWAP', 'px': '', 'sz': '169', 'type': '1', 'unit': 'coin'}], 'msg': ''}
-2022/12/09/ 18:18:08 PM - INFO - API Request Error(code=50001): Service temporarily unavailable. Please try again later
-2022/12/09/ 18:18:08 PM - INFO - 127.0.0.1 - - [09/Dec/2022 18:18:08] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 18:21:05 PM - INFO - 请求参数：
-2022/12/09/ 18:21:05 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 18:21:05 PM - INFO - 准备开仓
-2022/12/09/ 18:21:05 PM - INFO - 交易对
-2022/12/09/ 18:21:05 PM - INFO - BTCUSDT
-2022/12/09/ 18:21:05 PM - INFO - 币安交易所
-2022/12/09/ 18:21:10 PM - INFO - binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action, request ip: 37.120.203.228"}
-2022/12/09/ 18:21:10 PM - INFO - 127.0.0.1 - - [09/Dec/2022 18:21:10] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 18:22:38 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2022/12/16/ 21:57:01 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/16/ 21:57:51 PM - INFO - 请求参数：
+2022/12/16/ 21:57:51 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/16/ 21:57:51 PM - INFO - 准备开仓
+2022/12/16/ 21:57:51 PM - INFO - 交易对
+2022/12/16/ 21:57:51 PM - INFO - BTCUSDT
+2022/12/16/ 21:57:51 PM - INFO - 币安交易所
+2022/12/16/ 21:57:51 PM - INFO - 开始平仓
+2022/12/16/ 21:58:08 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2022/12/16/ 21:58:08 PM - INFO - 127.0.0.1 - - [16/Dec/2022 21:58:08] "POST /trade HTTP/1.1" 200 -
+2022/12/16/ 21:58:16 PM - INFO - 请求参数：
+2022/12/16/ 21:58:16 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/16/ 21:58:16 PM - INFO - 准备开仓
+2022/12/16/ 21:58:16 PM - INFO - 交易对
+2022/12/16/ 21:58:16 PM - INFO - BTCUSDT
+2022/12/16/ 21:58:16 PM - INFO - 币安交易所
+2022/12/16/ 21:58:26 PM - INFO - 可用保证金
+2022/12/16/ 21:58:26 PM - INFO - 91.0
+2022/12/16/ 21:58:26 PM - INFO - 当前交易币种的价格
+2022/12/16/ 21:58:28 PM - INFO - 16937.20
+2022/12/16/ 21:58:28 PM - INFO - _sz0.005
+2022/12/16/ 21:58:30 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/16/ 21:58:31 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/16/ 21:58:33 PM - INFO - {'code': '200', 'msg': 'success'}
+2022/12/16/ 21:58:34 PM - INFO - {'code': '200', 'msg': 'success'}
+2022/12/16/ 21:58:34 PM - INFO - 下单结果信息:
+2022/12/16/ 21:58:35 PM - INFO - {'info': {'orderId': '100016277057', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qe8d48950d273c46edecef0', 'price': '0', 'avgPrice': '16938.60000', 'origQty': '0.005', 'executedQty': '0.005', 'cumQty': '0.005', 'cumQuote': '84.69300', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1671199115906'}, 'id': '100016277057', 'clientOrderId': 'x-FZUXxJ8Qe8d48950d273c46edecef0', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16938.6, 'stopPrice': None, 'amount': 0.005, 'cost': 84.693, 'average': 16938.6, 'filled': 0.005, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/12/16/ 21:58:35 PM - INFO - 127.0.0.1 - - [16/Dec/2022 21:58:35] "POST /trade HTTP/1.1" 200 -
+2022/12/16/ 22:00:12 PM - INFO - 请求参数：
+2022/12/16/ 22:00:12 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/16/ 22:00:12 PM - INFO - 准备开仓
+2022/12/16/ 22:00:12 PM - INFO - 交易对
+2022/12/16/ 22:00:12 PM - INFO - BTCUSDT
+2022/12/16/ 22:00:12 PM - INFO - 币安交易所
+2022/12/16/ 22:00:12 PM - INFO - 开始平仓
+2022/12/16/ 22:00:28 PM - INFO - 127.0.0.1 - - [16/Dec/2022 22:00:28] "POST /trade HTTP/1.1" 200 -
+2022/12/16/ 22:04:01 PM - INFO - 请求参数：
+2022/12/16/ 22:04:01 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/16/ 22:04:01 PM - INFO - 准备开仓
+2022/12/16/ 22:04:01 PM - INFO - 交易对
+2022/12/16/ 22:04:01 PM - INFO - BTCUSDT
+2022/12/16/ 22:04:01 PM - INFO - 币安交易所
+2022/12/16/ 22:04:13 PM - INFO - 可用保证金
+2022/12/16/ 22:04:13 PM - INFO - 90.8947606
+2022/12/16/ 22:04:13 PM - INFO - 当前交易币种的价格
+2022/12/16/ 22:04:14 PM - INFO - 16960.20
+2022/12/16/ 22:04:14 PM - INFO - _sz0.005
+2022/12/16/ 22:04:16 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/16/ 22:04:17 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/16/ 22:04:19 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/12/16/ 22:04:21 PM - INFO - 设置持仓模式异常信息:
+2022/12/16/ 22:04:21 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/12/16/ 22:04:21 PM - INFO - 下单结果信息:
+2022/12/16/ 22:04:23 PM - INFO - {'info': {'orderId': '100017738470', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q6da7520cd7c8e392f1cc1e', 'price': '0', 'avgPrice': '16958.90000', 'origQty': '0.005', 'executedQty': '0.005', 'cumQty': '0.005', 'cumQuote': '84.79450', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1671199463846'}, 'id': '100017738470', 'clientOrderId': 'x-FZUXxJ8Q6da7520cd7c8e392f1cc1e', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16958.9, 'stopPrice': None, 'amount': 0.005, 'cost': 84.7945, 'average': 16958.9, 'filled': 0.005, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/12/16/ 22:04:23 PM - INFO - 127.0.0.1 - - [16/Dec/2022 22:04:23] "POST /trade HTTP/1.1" 200 -
+2022/12/16/ 22:04:30 PM - INFO - 请求参数：
+2022/12/16/ 22:04:30 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/16/ 22:04:30 PM - INFO - 准备开仓
+2022/12/16/ 22:04:30 PM - INFO - 交易对
+2022/12/16/ 22:04:30 PM - INFO - BTCUSDT
+2022/12/16/ 22:04:30 PM - INFO - 币安交易所
+2022/12/16/ 22:04:30 PM - INFO - 开始平仓
+2022/12/16/ 22:04:42 PM - INFO - 127.0.0.1 - - [16/Dec/2022 22:04:42] "POST /trade HTTP/1.1" 200 -
+2022/12/17/ 12:26:47 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:8000
-2022/12/09/ 18:22:38 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 18:22:42 PM - INFO - 请求参数：
-2022/12/09/ 18:22:42 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 18:22:42 PM - INFO - 准备开仓
-2022/12/09/ 18:22:42 PM - INFO - 交易对
-2022/12/09/ 18:22:42 PM - INFO - BTCUSDT
-2022/12/09/ 18:22:42 PM - INFO - 币安交易所
-2022/12/09/ 18:22:50 PM - INFO - 可用保证金
-2022/12/09/ 18:22:50 PM - INFO - {'DOT': 0.0, 'BTC': 0.0, 'SOL': 0.0, 'BNB': 0.0, 'ETH': 0.0, 'ADA': 0.0, 'USDT': 99.86875928, 'XRP': 0.0, 'BUSD': 0.0}
-2022/12/09/ 18:22:50 PM - INFO - 当前交易币种的价格
-2022/12/09/ 18:22:51 PM - INFO - 17206.00
-2022/12/09/ 18:22:51 PM - INFO - float() argument must be a string or a real number, not 'dict'
-2022/12/09/ 18:22:51 PM - INFO - 127.0.0.1 - - [09/Dec/2022 18:22:51] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 18:25:09 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:8000
-2022/12/09/ 18:25:09 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 18:25:12 PM - INFO - 请求参数：
-2022/12/09/ 18:25:12 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 18:25:12 PM - INFO - 准备开仓
-2022/12/09/ 18:25:12 PM - INFO - 交易对
-2022/12/09/ 18:25:12 PM - INFO - BTCUSDT
-2022/12/09/ 18:25:12 PM - INFO - 币安交易所
-2022/12/09/ 18:25:21 PM - INFO - 可用保证金
-2022/12/09/ 18:25:21 PM - INFO - 99.86875928
-2022/12/09/ 18:25:21 PM - INFO - 当前交易币种的价格
-2022/12/09/ 18:25:22 PM - INFO - 17214.40
-2022/12/09/ 18:25:23 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/12/09/ 18:25:24 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
-2022/12/09/ 18:25:25 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/12/09/ 18:25:26 PM - INFO - 设置持仓模式异常信息:
-2022/12/09/ 18:25:26 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/12/09/ 18:25:26 PM - INFO - 下单结果信息:
-2022/12/09/ 18:25:27 PM - INFO - 127.0.0.1 - - [09/Dec/2022 18:25:27] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 19:35:16 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:8000
-2022/12/09/ 19:35:16 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 19:37:35 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:8000
-2022/12/09/ 19:37:35 PM - INFO - [33mPress CTRL+C to quit[0m
-2022/12/09/ 19:37:42 PM - INFO - 请求参数：
-2022/12/09/ 19:37:42 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 19:37:42 PM - INFO - 准备开仓
-2022/12/09/ 19:37:42 PM - INFO - 交易对
-2022/12/09/ 19:37:42 PM - INFO - BTCUSDT
-2022/12/09/ 19:37:42 PM - INFO - 币安交易所
-2022/12/09/ 19:37:52 PM - INFO - 可用保证金
-2022/12/09/ 19:37:52 PM - INFO - 99.84479176
-2022/12/09/ 19:37:52 PM - INFO - 当前交易币种的价格
-2022/12/09/ 19:37:52 PM - INFO - 17223.60
-2022/12/09/ 19:37:52 PM - INFO - _sz0.001
-2022/12/09/ 19:37:53 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/12/09/ 19:37:55 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
-2022/12/09/ 19:37:56 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/12/09/ 19:37:57 PM - INFO - 设置持仓模式异常信息:
-2022/12/09/ 19:37:57 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/12/09/ 19:37:57 PM - INFO - 下单结果信息:
-2022/12/09/ 19:37:58 PM - INFO - {'info': {'orderId': '98378784376', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcu4fcc164b7e94d69172349f', 'price': '0', 'avgPrice': '17223.70000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '17.22370', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1670585878914'}, 'id': '98378784376', 'clientOrderId': 'x-xcKtGhcu4fcc164b7e94d69172349f', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 17223.7, 'stopPrice': None, 'amount': 0.001, 'cost': 17.2237, 'average': 17223.7, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
-2022/12/09/ 19:37:58 PM - INFO - 127.0.0.1 - - [09/Dec/2022 19:37:58] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 19:40:09 PM - INFO - 请求参数：
-2022/12/09/ 19:40:09 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'position': '0.01', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 19:40:09 PM - INFO - 准备开仓
-2022/12/09/ 19:40:09 PM - INFO - 交易对
-2022/12/09/ 19:40:09 PM - INFO - BTCUSDT
-2022/12/09/ 19:40:09 PM - INFO - 币安交易所
-2022/12/09/ 19:40:18 PM - INFO - 可用保证金
-2022/12/09/ 19:40:18 PM - INFO - 99.82921352
-2022/12/09/ 19:40:18 PM - INFO - 当前交易币种的价格
-2022/12/09/ 19:40:19 PM - INFO - 17226.00
-2022/12/09/ 19:40:19 PM - INFO - _sz0.000
-2022/12/09/ 19:40:20 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/12/09/ 19:40:21 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
-2022/12/09/ 19:40:22 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/12/09/ 19:40:22 PM - INFO - 设置持仓模式异常信息:
-2022/12/09/ 19:40:22 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/12/09/ 19:40:22 PM - INFO - 下单结果信息:
-2022/12/09/ 19:40:24 PM - INFO - 下单异常:
-2022/12/09/ 19:40:24 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
-2022/12/09/ 19:40:24 PM - INFO - -4003
-2022/12/09/ 19:40:24 PM - INFO - Quantity less than zero.
-2022/12/09/ 19:40:24 PM - INFO - 127.0.0.1 - - [09/Dec/2022 19:40:24] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 19:40:54 PM - INFO - 请求参数：
-2022/12/09/ 19:40:54 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 19:40:54 PM - INFO - 准备开仓
-2022/12/09/ 19:40:54 PM - INFO - 交易对
-2022/12/09/ 19:40:54 PM - INFO - BTCUSDT
-2022/12/09/ 19:40:54 PM - INFO - 币安交易所
-2022/12/09/ 19:41:01 PM - INFO - 可用保证金
-2022/12/09/ 19:41:01 PM - INFO - 99.82921352
-2022/12/09/ 19:41:01 PM - INFO - 当前交易币种的价格
-2022/12/09/ 19:41:01 PM - INFO - 17224.80
-2022/12/09/ 19:41:01 PM - INFO - _sz0.006
-2022/12/09/ 19:41:03 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/12/09/ 19:41:04 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
-2022/12/09/ 19:41:05 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/12/09/ 19:41:06 PM - INFO - 设置持仓模式异常信息:
-2022/12/09/ 19:41:06 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/12/09/ 19:41:06 PM - INFO - 下单结果信息:
-2022/12/09/ 19:41:06 PM - INFO - {'info': {'orderId': '98379188631', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcu28c899c5b012fd15783039', 'price': '0', 'avgPrice': '17224.80000', 'origQty': '0.006', 'executedQty': '0.006', 'cumQty': '0.006', 'cumQuote': '103.34880', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1670586067549'}, 'id': '98379188631', 'clientOrderId': 'x-xcKtGhcu28c899c5b012fd15783039', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 17224.8, 'stopPrice': None, 'amount': 0.006, 'cost': 103.3488, 'average': 17224.8, 'filled': 0.006, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
-2022/12/09/ 19:41:06 PM - INFO - 127.0.0.1 - - [09/Dec/2022 19:41:06] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 19:41:30 PM - INFO - 请求参数：
-2022/12/09/ 19:41:30 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 19:41:30 PM - INFO - 准备开仓
-2022/12/09/ 19:41:30 PM - INFO - 交易对
-2022/12/09/ 19:41:30 PM - INFO - BTCUSDT
-2022/12/09/ 19:41:30 PM - INFO - 币安交易所
-2022/12/09/ 19:41:40 PM - INFO - 127.0.0.1 - - [09/Dec/2022 19:41:40] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 19:43:53 PM - INFO - 请求参数：
-2022/12/09/ 19:43:53 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 19:43:53 PM - INFO - 准备开仓
-2022/12/09/ 19:43:53 PM - INFO - 交易对
-2022/12/09/ 19:43:53 PM - INFO - BTCUSDT
-2022/12/09/ 19:43:53 PM - INFO - 币安交易所
-2022/12/09/ 19:44:02 PM - INFO - 可用保证金
-2022/12/09/ 19:44:02 PM - INFO - 99.72074481
-2022/12/09/ 19:44:02 PM - INFO - 当前交易币种的价格
-2022/12/09/ 19:44:03 PM - INFO - 17225.00
-2022/12/09/ 19:44:03 PM - INFO - _sz0.006
-2022/12/09/ 19:44:04 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
-2022/12/09/ 19:44:04 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
-2022/12/09/ 19:44:05 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
-2022/12/09/ 19:44:06 PM - INFO - 设置持仓模式异常信息:
-2022/12/09/ 19:44:06 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
-2022/12/09/ 19:44:06 PM - INFO - 下单结果信息:
-2022/12/09/ 19:44:07 PM - INFO - {'info': {'orderId': '98379629085', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-xcKtGhcudedc75a32831285e9b74e6', 'price': '0', 'avgPrice': '17225.10000', 'origQty': '0.006', 'executedQty': '0.006', 'cumQty': '0.006', 'cumQuote': '103.35060', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1670586248281'}, 'id': '98379629085', 'clientOrderId': 'x-xcKtGhcudedc75a32831285e9b74e6', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 17225.1, 'stopPrice': None, 'amount': 0.006, 'cost': 103.3506, 'average': 17225.1, 'filled': 0.006, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
-2022/12/09/ 19:44:07 PM - INFO - 127.0.0.1 - - [09/Dec/2022 19:44:07] "POST /trade HTTP/1.1" 200 -
-2022/12/09/ 19:44:32 PM - INFO - 请求参数：
-2022/12/09/ 19:44:32 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.1', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL', 'secret_key': 'O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1', 'passphrase': ''}}
-2022/12/09/ 19:44:32 PM - INFO - 准备开仓
-2022/12/09/ 19:44:32 PM - INFO - 交易对
-2022/12/09/ 19:44:32 PM - INFO - BTCUSDT
-2022/12/09/ 19:44:32 PM - INFO - 币安交易所
-2022/12/09/ 19:44:40 PM - INFO - 127.0.0.1 - - [09/Dec/2022 19:44:40] "POST /trade HTTP/1.1" 200 -
+2022/12/17/ 12:26:47 PM - INFO - [33mPress CTRL+C to quit[0m
+2022/12/17/ 12:27:05 PM - INFO - 请求参数：
+2022/12/17/ 12:27:05 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.3', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/17/ 12:27:05 PM - INFO - 准备开仓
+2022/12/17/ 12:27:05 PM - INFO - 交易对
+2022/12/17/ 12:27:05 PM - INFO - BTCUSDT
+2022/12/17/ 12:27:05 PM - INFO - 币安交易所
+2022/12/17/ 12:27:17 PM - INFO - 可用保证金
+2022/12/17/ 12:27:17 PM - INFO - 90.8334224
+2022/12/17/ 12:27:17 PM - INFO - 当前交易币种的价格
+2022/12/17/ 12:27:18 PM - INFO - 16685.30
+2022/12/17/ 12:27:18 PM - INFO - _sz0.016
+2022/12/17/ 12:27:19 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/17/ 12:27:20 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/17/ 12:27:21 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/12/17/ 12:27:22 PM - INFO - 设置持仓模式异常信息:
+2022/12/17/ 12:27:22 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/12/17/ 12:27:22 PM - INFO - 下单结果信息:
+2022/12/17/ 12:27:23 PM - INFO - {'info': {'orderId': '100198730614', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qc63a657d2cc4090ca4bd63', 'price': '0', 'avgPrice': '16683.20000', 'origQty': '0.016', 'executedQty': '0.016', 'cumQty': '0.016', 'cumQuote': '266.93120', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1671251243859'}, 'id': '100198730614', 'clientOrderId': 'x-FZUXxJ8Qc63a657d2cc4090ca4bd63', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16683.2, 'stopPrice': None, 'amount': 0.016, 'cost': 266.9312, 'average': 16683.2, 'filled': 0.016, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/12/17/ 12:27:23 PM - INFO - 127.0.0.1 - - [17/Dec/2022 12:27:23] "POST /trade HTTP/1.1" 200 -
+2022/12/17/ 12:27:55 PM - INFO - 请求参数：
+2022/12/17/ 12:27:55 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.3', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/17/ 12:27:55 PM - INFO - 准备开仓
+2022/12/17/ 12:27:55 PM - INFO - 交易对
+2022/12/17/ 12:27:55 PM - INFO - BTCUSDT
+2022/12/17/ 12:27:55 PM - INFO - 币安交易所
+2022/12/17/ 12:27:55 PM - INFO - 开始平仓
+2022/12/17/ 12:28:07 PM - INFO - 127.0.0.1 - - [17/Dec/2022 12:28:07] "POST /trade HTTP/1.1" 200 -
+2022/12/17/ 12:37:51 PM - INFO - 请求参数：
+2022/12/17/ 12:37:51 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.3', 'strategy.market_position': 'long', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/17/ 12:37:51 PM - INFO - 准备开仓
+2022/12/17/ 12:37:51 PM - INFO - 交易对
+2022/12/17/ 12:37:51 PM - INFO - BTCUSDT
+2022/12/17/ 12:37:51 PM - INFO - 币安交易所
+2022/12/17/ 12:38:04 PM - INFO - 可用保证金
+2022/12/17/ 12:38:04 PM - INFO - 90.67425568
+2022/12/17/ 12:38:04 PM - INFO - 当前交易币种的价格
+2022/12/17/ 12:38:06 PM - INFO - 16688.10
+2022/12/17/ 12:38:06 PM - INFO - _sz0.016
+2022/12/17/ 12:38:07 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2022/12/17/ 12:38:08 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '10', 'maxNotionalValue': '20000000'}
+2022/12/17/ 12:38:09 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2022/12/17/ 12:38:10 PM - INFO - 设置持仓模式异常信息:
+2022/12/17/ 12:38:10 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2022/12/17/ 12:38:10 PM - INFO - 下单结果信息:
+2022/12/17/ 12:38:11 PM - INFO - {'info': {'orderId': '100200768407', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q81148bf39d77cfeaa76793', 'price': '0', 'avgPrice': '16686.50000', 'origQty': '0.016', 'executedQty': '0.016', 'cumQty': '0.016', 'cumQuote': '266.98400', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1671251892347'}, 'id': '100200768407', 'clientOrderId': 'x-FZUXxJ8Q81148bf39d77cfeaa76793', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 16686.5, 'stopPrice': None, 'amount': 0.016, 'cost': 266.984, 'average': 16686.5, 'filled': 0.016, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': []}
+2022/12/17/ 12:38:11 PM - INFO - 127.0.0.1 - - [17/Dec/2022 12:38:11] "POST /trade HTTP/1.1" 200 -
+2022/12/17/ 12:38:23 PM - INFO - 请求参数：
+2022/12/17/ 12:38:23 PM - INFO - {'strategy': 'strategyA', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '10', 'position': '0.3', 'strategy.market_position': 'flat', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'exchange': {'name': 'binance', 'api_key': '0xL38kNMVtZfPaQhXSp55MwibAknnvl01q0xQ2KaBaIa5i8Gte9NDy350t75awJU', 'secret_key': 'MXahDX14pv3oS1QbQPg8gH5iXcuBH6WVQZPz8AC17nDeDZxykm1PYu2YSMW8DJpA', 'passphrase': ''}}
+2022/12/17/ 12:38:23 PM - INFO - 准备开仓
+2022/12/17/ 12:38:23 PM - INFO - 交易对
+2022/12/17/ 12:38:23 PM - INFO - BTCUSDT
+2022/12/17/ 12:38:23 PM - INFO - 币安交易所
+2022/12/17/ 12:38:23 PM - INFO - 开始平仓
+2022/12/17/ 12:38:36 PM - INFO - 127.0.0.1 - - [17/Dec/2022 12:38:36] "POST /trade HTTP/1.1" 200 -

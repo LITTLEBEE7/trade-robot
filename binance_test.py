@@ -1,3 +1,4 @@
+import random
 from re import S
 from turtle import position
 from binance.binance_exchange import BinanceExchange
@@ -38,8 +39,8 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "4iNRAVWpkjRHUV57S3UA5BGkVgWt9PdSkF6eVYD0ALpSUtVqR6rLiQ7nLV2C9UmL"
-secret_key = "O0Fk460bV9a4QnKS6xbGb7d1vrMPWdcRA8U4SET4CB3dgzQO9b7t6EtPjtg6CDq1"
+# api_key = ""
+# secret_key = ""
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -123,14 +124,27 @@ def current_positions(symbol):
 # current_positions(["BTCUSDT"])
 
 # 获取账户的可用余额
-balance = client.fetch_balance({"type":"future"})
-print(balance["total"])
-print(balance["free"])
-print(balance["used"])
+# balance = client.fetch_balance({"type":"future"})
+# print(balance["total"])
+# print(balance["free"])
+# print(balance["used"])
 
 # cancelResult = client.cancel_all_orders("BTCUSDT")
 # print(cancelResult)
 
 # price = client.fetch_ticker("BTCUSDT")
 # print(price["info"]["lastPrice"])
+# income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
+# print(json.dumps(income))
 
+# hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
+# print(hh)
+# def uuid22(length=22):
+#     return format(random.getrandbits(length * 4), 'x')
+
+# print(uuid22())
+
+# history = client.fetch_orders(symbol="BTCUSDT")
+# print(history)
+
+print(client)

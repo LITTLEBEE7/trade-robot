@@ -1,5 +1,6 @@
 import logging
 import json
+import random
 class BinanceTradeApi:
     # 下单
     def palce_order(self,exchange,symbol,type,side,amount,level,tdMode,price):
@@ -32,7 +33,7 @@ class BinanceTradeApi:
             logging.info(e)
         logging.info("下单结果信息:")
         try:
-            res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price)
+            res =  exchange.create_order(symbol=symbol,type=type,side=side,amount=amount,price=price,params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
             logging.info(res)
             response["msg"] = res["info"]["orderId"]
         except Exception as e:
@@ -45,6 +46,9 @@ class BinanceTradeApi:
             response["msg"]= exc["msg"]
         return response
 
+    # 随机数
+    def uuid22(self,length=22):
+        return format(random.getrandbits(length * 4), 'x')
     # 市价平仓
     def close_positions(self,exchange,symbol):
         try:
@@ -53,8 +57,8 @@ class BinanceTradeApi:
                 sz = pos["contracts"]
                 side = pos["side"]
                 if(side == "short"):
-                    exchange.create_order(symbol=symbol,type="market",side="buy",amount=float(sz),price="")
+                    exchange.create_order(symbol=symbol,type="market",side="buy",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
                 else:
-                    exchange.create_order(symbol=symbol,type="market",side="sell",amount=float(sz),price="")
+                    exchange.create_order(symbol=symbol,type="market",side="sell",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
         except Exception as e:
             logging.info(e)

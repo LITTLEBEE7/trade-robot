@@ -8,9 +8,9 @@ import okx.status_api as status
 
 # type your api mesage
 #okx real api
-api_key = "30d56652-3a4d-49c2-a14e-4a00c343d567"
-secret_key = "A74B2B30E721C90168489A103CE5FBC7"
-passphrase = "Fan@121216"
+api_key = ""
+secret_key = ""
+passphrase = ""
 # flag = '1'  # 模拟盘 demo trading
 flag = '0'  # 实盘 real trading
 
