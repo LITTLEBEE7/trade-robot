@@ -39,8 +39,8 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-# api_key = ""
-# secret_key = ""
+api_key = ""
+secret_key = ""
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 

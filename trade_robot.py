@@ -17,6 +17,7 @@ import _thread
 import configparser
 import urllib.request
 import requests
+import random
 
 # 读取设置
 config = {}
@@ -41,7 +42,9 @@ LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%Y/%m/%d/ %H:%M:%S %p"
 logging.basicConfig(filename='my_trade.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT)
 
-
+  # 随机数
+def uuid22(length=22):
+    return format(random.getrandbits(length * 4), 'x')
 # 取消未成交的挂单
 def cancel_pending_orders(tradeAPI,instId,algoOrderType):
     # 先获取未成交的订单信息
@@ -219,8 +222,17 @@ def start_trade():
             logging.info(_instId)
             if _strategyPosition == "flat":
                 logging.info("开始平仓")
-                close_position(accountAPI,tradeAPI,_instId,_tdMode)
-                res["msg"] = "平仓成功"
+                clOrdId = uuid22()
+                logging.info("自定义id")
+                closeRes = tradeAPI.close_positions(_instId,_tdMode,clOrdId=clOrdId)
+                logging.info(closeRes)
+                # close_position(accountAPI,tradeAPI,_instId,_tdMode)
+                if(closeRes["code"]=='0'):
+                    res["data"]["orderId"] = closeRes["data"][0]["clOrdId"]
+                    res["msg"] = "平仓成功"
+                else:
+                    res["msg"] = "平仓失败"
+                    res["statusCode"]= 3000
                 return res
 
             #获取用户账户余额
@@ -288,8 +300,13 @@ def start_trade():
             binanceExchange = BinanceTradeApi()
             if _strategyPosition == "flat":
                 logging.info("开始平仓")
-                binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
-                res["msg"] = "平仓成功"
+                result = binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
+                if(result["code"] == 200):
+                    res["msg"] = "平仓成功"
+                    res["data"]["orderId"] = result["msg"]
+                else:
+                    res["statusCode"] = result["code"]
+                    res['msg'] = result["msg"]
                 return res
 
             # 获取账户的可用余额
@@ -319,6 +336,7 @@ def start_trade():
             res['msg'] = "服务器内部错误"
     else:
         res['msg']="交易所不存在"
+        res["statusCode"]=5000
     
     return res
 

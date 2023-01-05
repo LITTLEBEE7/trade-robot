@@ -51,14 +51,30 @@ class BinanceTradeApi:
         return format(random.getrandbits(length * 4), 'x')
     # 市价平仓
     def close_positions(self,exchange,symbol):
+        response = {
+        "code":200,
+        "msg":""
+        }
         try:
             positions = exchange.fetch_positions([symbol])
             for pos in positions:
                 sz = pos["contracts"]
                 side = pos["side"]
                 if(side == "short"):
-                    exchange.create_order(symbol=symbol,type="market",side="buy",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
+                   res = exchange.create_order(symbol=symbol,type="market",side="buy",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
+                   logging.info(res)
+                   response["msg"] = res["info"]["orderId"]
                 else:
-                    exchange.create_order(symbol=symbol,type="market",side="sell",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
+                    res = exchange.create_order(symbol=symbol,type="market",side="sell",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
+                    logging.info(res)
+                    response["msg"] = res["info"]["orderId"]
         except Exception as e:
+            logging.info("平仓异常:")
             logging.info(e)
+            exc = json.loads(str(e.args[0])[7:].strip())
+            logging.info(exc)
+            logging.info(exc["code"])
+            logging.info(exc["msg"])
+            response["code"] = exc["code"]
+            response["msg"]= exc["msg"]
+        return response

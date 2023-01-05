@@ -39,8 +39,8 @@ class TradeAPI(Client):
         return self._request_with_params(POST, AMEND_BATCH_ORDER, orders_data)
 
     # Close Positions
-    def close_positions(self, instId, mgnMode, posSide=None, ccy=None):
-        params = {'instId': instId, 'mgnMode': mgnMode, 'posSide': posSide, 'ccy': ccy}
+    def close_positions(self, instId, mgnMode, posSide=None, ccy=None,clOrdId=None):
+        params = {'instId': instId, 'mgnMode': mgnMode, 'posSide': posSide, 'ccy': ccy,"clOrdId":clOrdId}
         return self._request_with_params(POST, CLOSE_POSITION, params)
 
     # Get Order Details
