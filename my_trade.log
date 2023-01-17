@@ -1,0 +1,192 @@
+2023/01/14/ 19:05:41 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023/01/14/ 19:05:41 PM - INFO - [33mPress CTRL+C to quit[0m
+2023/01/14/ 19:06:17 PM - INFO - 请求参数：
+2023/01/14/ 19:06:17 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:06:17 PM - INFO - 准备开仓
+2023/01/14/ 19:06:17 PM - INFO - 交易对
+2023/01/14/ 19:06:17 PM - INFO - ETHUSDT
+2023/01/14/ 19:06:17 PM - INFO - 币安交易所
+2023/01/14/ 19:06:17 PM - INFO - 开始平仓
+2023/01/14/ 19:06:33 PM - INFO - 平仓异常:
+2023/01/14/ 19:06:33 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:06:33 PM - ERROR - Exception on /trade [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2153, in make_response
+    rv = self.json.response(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type BadRequest is not JSON serializable
+2023/01/14/ 19:06:33 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:06:33] "[35m[1mPOST /trade HTTP/1.1[0m" 500 -
+2023/01/14/ 19:07:35 PM - INFO - 请求参数：
+2023/01/14/ 19:07:35 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:07:35 PM - INFO - 准备开仓
+2023/01/14/ 19:07:35 PM - INFO - 交易对
+2023/01/14/ 19:07:35 PM - INFO - ETHUSDT
+2023/01/14/ 19:07:35 PM - INFO - 币安交易所
+2023/01/14/ 19:07:35 PM - INFO - 开始平仓
+2023/01/14/ 19:07:56 PM - INFO - 平仓异常:
+2023/01/14/ 19:07:56 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:07:56 PM - ERROR - Exception on /trade [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2153, in make_response
+    rv = self.json.response(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type BadRequest is not JSON serializable
+2023/01/14/ 19:07:56 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:07:56] "[35m[1mPOST /trade HTTP/1.1[0m" 500 -
+2023/01/14/ 19:10:17 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023/01/14/ 19:10:17 PM - INFO - [33mPress CTRL+C to quit[0m
+2023/01/14/ 19:10:23 PM - INFO - 请求参数：
+2023/01/14/ 19:10:23 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:10:23 PM - INFO - 准备开仓
+2023/01/14/ 19:10:23 PM - INFO - 交易对
+2023/01/14/ 19:10:23 PM - INFO - ETHUSDT
+2023/01/14/ 19:10:23 PM - INFO - 币安交易所
+2023/01/14/ 19:10:23 PM - INFO - 开始平仓
+2023/01/14/ 19:10:39 PM - INFO - 平仓异常:
+2023/01/14/ 19:10:39 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:10:39 PM - INFO - {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:10:39 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
+2023/01/14/ 19:10:39 PM - INFO - -4003
+2023/01/14/ 19:10:39 PM - INFO - Quantity less than zero.
+2023/01/14/ 19:10:39 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:10:39] "POST /trade HTTP/1.1" 200 -
+2023/01/14/ 19:11:19 PM - INFO - 请求参数：
+2023/01/14/ 19:11:19 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:11:19 PM - INFO - 准备开仓
+2023/01/14/ 19:11:19 PM - INFO - 交易对
+2023/01/14/ 19:11:19 PM - INFO - ETHUSDT
+2023/01/14/ 19:11:19 PM - INFO - 币安交易所
+2023/01/14/ 19:11:19 PM - INFO - 开始平仓
+2023/01/14/ 19:11:33 PM - INFO - 平仓异常:
+2023/01/14/ 19:11:33 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:11:33 PM - INFO - {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:11:33 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
+2023/01/14/ 19:11:33 PM - INFO - -4003
+2023/01/14/ 19:11:33 PM - INFO - Quantity less than zero.
+2023/01/14/ 19:11:33 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:11:33] "POST /trade HTTP/1.1" 200 -
+2023/01/14/ 19:12:25 PM - INFO - 请求参数：
+2023/01/14/ 19:12:25 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:12:25 PM - INFO - 准备开仓
+2023/01/14/ 19:12:25 PM - INFO - 交易对
+2023/01/14/ 19:12:25 PM - INFO - ETHUSDT
+2023/01/14/ 19:12:25 PM - INFO - 币安交易所
+2023/01/14/ 19:12:25 PM - INFO - 开始平仓
+2023/01/14/ 19:12:43 PM - INFO - 平仓异常:
+2023/01/14/ 19:12:43 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:12:43 PM - INFO - {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:12:43 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
+2023/01/14/ 19:12:43 PM - INFO - -4003
+2023/01/14/ 19:12:43 PM - INFO - Quantity less than zero.
+2023/01/14/ 19:12:43 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:12:43] "POST /trade HTTP/1.1" 200 -
+2023/01/14/ 19:14:58 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023/01/14/ 19:14:58 PM - INFO - [33mPress CTRL+C to quit[0m
+2023/01/14/ 19:15:03 PM - INFO - 请求参数：
+2023/01/14/ 19:15:03 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:15:03 PM - INFO - 准备开仓
+2023/01/14/ 19:15:03 PM - INFO - 交易对
+2023/01/14/ 19:15:03 PM - INFO - ETHUSDT
+2023/01/14/ 19:15:03 PM - INFO - 币安交易所
+2023/01/14/ 19:15:03 PM - INFO - 开始平仓
+2023/01/14/ 19:15:20 PM - INFO - 平仓异常:
+2023/01/14/ 19:15:20 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:15:20 PM - INFO - {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:15:20 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
+2023/01/14/ 19:15:20 PM - INFO - -4003
+2023/01/14/ 19:15:20 PM - INFO - Quantity less than zero.
+2023/01/14/ 19:15:20 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:15:20] "POST /trade HTTP/1.1" 200 -
+2023/01/14/ 19:18:10 PM - INFO - 请求参数：
+2023/01/14/ 19:18:10 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'long', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:18:10 PM - INFO - 准备开仓
+2023/01/14/ 19:18:10 PM - INFO - 交易对
+2023/01/14/ 19:18:10 PM - INFO - ETHUSDT
+2023/01/14/ 19:18:10 PM - INFO - 币安交易所
+2023/01/14/ 19:18:21 PM - INFO - 可用保证金
+2023/01/14/ 19:18:21 PM - INFO - 0.0
+2023/01/14/ 19:18:21 PM - INFO - 当前交易币种的价格
+2023/01/14/ 19:18:22 PM - INFO - 1533.14
+2023/01/14/ 19:18:22 PM - INFO - _sz0.000
+2023/01/14/ 19:18:23 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/01/14/ 19:18:24 PM - INFO - {'symbol': 'ETHUSDT', 'leverage': '1', 'maxNotionalValue': '300000000'}
+2023/01/14/ 19:18:26 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/01/14/ 19:18:28 PM - INFO - 设置持仓模式异常信息:
+2023/01/14/ 19:18:28 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/01/14/ 19:18:28 PM - INFO - 下单结果信息:
+2023/01/14/ 19:18:29 PM - INFO - 下单异常:
+2023/01/14/ 19:18:29 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
+2023/01/14/ 19:18:29 PM - INFO - -4003
+2023/01/14/ 19:18:29 PM - INFO - Quantity less than zero.
+2023/01/14/ 19:18:29 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:18:29] "POST /trade HTTP/1.1" 200 -
+2023/01/14/ 19:25:12 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023/01/14/ 19:25:12 PM - INFO - [33mPress CTRL+C to quit[0m
+2023/01/14/ 19:25:16 PM - INFO - 请求参数：
+2023/01/14/ 19:25:16 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'flat', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/14/ 19:25:16 PM - INFO - 准备开仓
+2023/01/14/ 19:25:16 PM - INFO - 交易对
+2023/01/14/ 19:25:16 PM - INFO - ETHUSDT
+2023/01/14/ 19:25:16 PM - INFO - 币安交易所
+2023/01/14/ 19:25:16 PM - INFO - 开始平仓
+2023/01/14/ 19:25:33 PM - INFO - 平仓异常:
+2023/01/14/ 19:25:33 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/14/ 19:25:33 PM - INFO - {'code': -4003, 'msg': 'Quantity less than zero.'}
+2023/01/14/ 19:25:33 PM - INFO - -4003
+2023/01/14/ 19:25:33 PM - INFO - Quantity less than zero.
+2023/01/14/ 19:25:33 PM - INFO - 127.0.0.1 - - [14/Jan/2023 19:25:33] "POST /trade HTTP/1.1" 200 -
+2023/01/17/ 22:14:59 PM - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023/01/17/ 22:14:59 PM - INFO - [33mPress CTRL+C to quit[0m
+2023/01/17/ 22:15:22 PM - INFO - 请求参数：
+2023/01/17/ 22:15:22 PM - INFO - {'symbol': 'ETH-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'long', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'aMGDPAWQGJ9ixYMfTVIntv0RSeVZk8hF1fjzk1twPa2oCamG1qJ6jSGAjCGxxM39', 'api_key': 'qsU1UX7I5sRDPscjDjhrNYQFTRmbaI5P5milxastxoTEXL4Kr9poxXIFeZUfUfrS', 'name': 'binance', 'passphrase': ''}, 'position': 0.2, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/01/17/ 22:15:22 PM - INFO - 准备开仓
+2023/01/17/ 22:15:22 PM - INFO - 交易对
+2023/01/17/ 22:15:22 PM - INFO - ETHUSDT
+2023/01/17/ 22:15:22 PM - INFO - 币安交易所
+2023/01/17/ 22:15:37 PM - INFO - 可用保证金
+2023/01/17/ 22:15:37 PM - INFO - 0.0
+2023/01/17/ 22:15:37 PM - INFO - 当前交易币种的价格
+2023/01/17/ 22:15:37 PM - INFO - 1591.57
+2023/01/17/ 22:15:37 PM - INFO - _sz0.000
+2023/01/17/ 22:15:38 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/01/17/ 22:15:39 PM - INFO - {'symbol': 'ETHUSDT', 'leverage': '1', 'maxNotionalValue': '300000000'}
+2023/01/17/ 22:15:42 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/01/17/ 22:15:43 PM - INFO - 设置持仓模式异常信息:
+2023/01/17/ 22:15:43 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/01/17/ 22:15:43 PM - INFO - 下单结果信息:
+2023/01/17/ 22:15:44 PM - INFO - 下单异常:
+2023/01/17/ 22:15:44 PM - INFO - binance {"code":-4003,"msg":"Quantity less than zero."}
+2023/01/17/ 22:15:44 PM - INFO - 127.0.0.1 - - [17/Jan/2023 22:15:44] "POST /trade HTTP/1.1" 200 -

@@ -38,12 +38,13 @@ class BinanceTradeApi:
             response["msg"] = res["info"]["orderId"]
         except Exception as e:
             logging.info("下单异常:")
-            exc = json.loads(str(e.args[0])[7:].strip())
-            logging.info(exc)
-            logging.info(exc["code"])
-            logging.info(exc["msg"])
-            response["code"] = exc["code"]
-            response["msg"]= exc["msg"]
+            logging.info(e)
+            # exc = json.loads(str(e.args[0])[7:].strip())
+            # logging.info(exc)
+            # logging.info(exc["code"])
+            # logging.info(exc["msg"])
+            response["code"] = 3000
+            response["msg"]= str(e.args[0])
         return response
 
     # 随机数
@@ -71,10 +72,10 @@ class BinanceTradeApi:
         except Exception as e:
             logging.info("平仓异常:")
             logging.info(e)
-            exc = json.loads(str(e.args[0])[7:].strip())
-            logging.info(exc)
-            logging.info(exc["code"])
-            logging.info(exc["msg"])
-            response["code"] = exc["code"]
-            response["msg"]= exc["msg"]
+            # exc = json.loads(str(e.args[0])[7:].strip())
+            # logging.info(exc)
+            # logging.info(exc["code"])
+            # logging.info(exc["msg"])
+            response["code"] = 3000
+            response["msg"]= str(e.args[0])
         return response

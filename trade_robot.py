@@ -203,8 +203,8 @@ def start_trade():
     logging.info("准备开仓")
     if(_exchange == "okx"):
         logging.info("okx交易所")
-        flag = '1'  # 模拟盘 demo trading
-        # flag = '0'  # 实盘 real trading
+        # flag = '1'  # 模拟盘 demo trading
+        flag = '0'  # 实盘 real trading
         # okx account api
         accountAPI = Account.AccountAPI(api_key, secret_key, passphrase, False, flag)
         # okx trade api
@@ -266,6 +266,7 @@ def start_trade():
             logging.info(converRes)
             sz = converRes["data"][0]["sz"]
             if int(sz) < 1:
+                res["statusCode"]= 3001
                 res['msg'] = 'Amount is too small. Please increase amount.'
             else:
                 # 下单
