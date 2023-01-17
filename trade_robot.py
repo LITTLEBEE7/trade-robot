@@ -345,7 +345,7 @@ def start_trade():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run(port=8000)
+        app.run()
     except Exception as e:
         logging.info(e)
         pass
