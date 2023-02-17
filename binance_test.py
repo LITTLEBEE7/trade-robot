@@ -39,8 +39,8 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = ""
-secret_key = ""
+api_key = "XeQeDfPEc65jsNl4q7fs7mnNpvpX5eTbjp0aWCiRtA9HUKAUVTv9foXT5KJUlxhk"
+secret_key = "eCeWD98rAsSKsC3C5TKqZyHJ3sOZ2sY7WbKkUyfepKd4J86Un6BnU5b6Qbf02kFA"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -128,14 +128,16 @@ def current_positions(symbol):
 # print(balance["total"])
 # print(balance["free"])
 # print(balance["used"])
-
+# 可用保证金
+# print("可用保证金")
+# print(balance["free"]["USDT"])
 # cancelResult = client.cancel_all_orders("BTCUSDT")
 # print(cancelResult)
 
 # price = client.fetch_ticker("BTCUSDT")
 # print(price["info"]["lastPrice"])
-# income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
-# print(json.dumps(income))
+income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
+print(json.dumps(income))
 
 # hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
 # print(hh)
@@ -147,4 +149,3 @@ def current_positions(symbol):
 # history = client.fetch_orders(symbol="BTCUSDT")
 # print(history)
 
-print(client)

@@ -149,8 +149,13 @@ def start_trade():
     res = {
         "statusCode":2000,
         "msg":"订单交易成功",
-        "data":{
-        "orderId":""
+        "orderData":{
+            "info":"",
+            "orderId":""
+        },
+        "closeData":{
+            "info":"",
+            "closeOrderId":""
         }
     }
     # 获取请求体
@@ -228,13 +233,26 @@ def start_trade():
                 logging.info(closeRes)
                 # close_position(accountAPI,tradeAPI,_instId,_tdMode)
                 if(closeRes["code"]=='0'):
-                    res["data"]["orderId"] = closeRes["data"][0]["clOrdId"]
-                    res["msg"] = "平仓成功"
+                    res["closeData"]["closeOrderId"] = closeRes["data"][0]["clOrdId"]
+                    res["closeData"]["info"] = "平仓成功"
                 else:
                     res["msg"] = "平仓失败"
+                    res["closeData"]["info"] = "平仓失败"
                     res["statusCode"]= 3000
                 return res
-
+            # 开始下单之前先平仓
+            try:
+                logging.info("开仓之前先平仓")
+                clOrdId = uuid22()
+                logging.info("自定义id")
+                closeRes = tradeAPI.close_positions(_instId,_tdMode,clOrdId=clOrdId)
+                if(closeRes["code"]=='0'):
+                    res["closeData"]["closeOrderId"] = closeRes["data"][0]["clOrdId"]
+                    res["closeData"]["info"] = "平仓成功"
+                else:
+                    res["closeData"]["info"] = "平仓失败"
+            except Exception as e:
+                logging.info(e)
             #获取用户账户余额
             balance =  accountAPI.get_account(ccy="USDT")
             logging.info("账户余额")
@@ -274,14 +292,17 @@ def start_trade():
                 logging.info("下单信息：")
                 logging.info(orderRes)
                 if(orderRes["code"]=='0'):
-                    res["data"]["orderId"] = orderRes["data"][0]["ordId"]
+                    res["orderData"]['info'] = "下单成功"
+                    res["orderData"]["orderId"] = orderRes["data"][0]["ordId"]
                 else:
                     res["statusCode"] = orderRes["data"][0]["sCode"]
-                    res['msg'] = orderRes["data"][0]["sMsg"]
-                lastOrderId = orderRes["data"][0]["ordId"]
+                    res['msg'] = ""
+                    res["orderData"]['info'] = orderRes["data"][0]["sMsg"]
+                  
+                # lastOrderId = orderRes["data"][0]["ordId"]
                 # 设置止盈止损
-                if _params['enable_stop_loss'] and _params['enable_stop_gain']:
-                    set_tp_or_slOrd(tradeAPI,_params,sz,lastOrderId)
+                # if _params['enable_stop_loss'] and _params['enable_stop_gain']:
+                #     set_tp_or_slOrd(tradeAPI,_params,sz,lastOrderId)
         except Exception as e:
             logging.info(e)
             res["statusCode"] = 2005
@@ -303,13 +324,24 @@ def start_trade():
                 logging.info("开始平仓")
                 result = binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
                 if(result["code"] == 200):
-                    res["msg"] = "平仓成功"
-                    res["data"]["orderId"] = result["msg"]
+                    res["closeData"]["info"] = "平仓成功"
+                    res["closeData"]["closeOrderId"] = result["msg"]
                 else:
                     res["statusCode"] = result["code"]
-                    res['msg'] = result["msg"]
+                    res['msg'] = "平仓失败"
+                    res["closeData"]["info"] = result["msg"]
                 return res
-
+            # 开仓之前先平仓
+            try:
+                logging.info("开仓之前先平仓")
+                result = binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
+                if(result["code"] == 200):
+                    res["closeData"]['info']  = "平仓成功"
+                    res["closeData"]["closeOrderId"] = result["msg"]
+                else:
+                    res["closeData"]['info'] = result["msg"]
+            except Exception as e:
+                logging.info(e)
             # 获取账户的可用余额
             balance = binanceClient.fetch_balance({"type":"future"})
             freeBal = balance["free"]["USDT"]
@@ -327,10 +359,12 @@ def start_trade():
             logging.info("_sz%s"%(_sz))
             result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
             if(result["code"] == 200):
-                res["data"]["orderId"] = result["msg"]
+                res["orderData"]['info'] = "下单成功"
+                res["orderData"]["orderId"] = result["msg"]
             else:
                 res["statusCode"] = result["code"]
-                res['msg'] = result["msg"]
+                res['msg'] = ""
+                res["orderData"]['info'] = result["msg"]
         except Exception as e:
             logging.info(e)
             res["statusCode"] = 2005
@@ -345,7 +379,7 @@ def start_trade():
 if __name__ == '__main__':
     try:
         # 启动服务
-        app.run()
+        app.run(port=8080)
     except Exception as e:
         logging.info(e)
         pass

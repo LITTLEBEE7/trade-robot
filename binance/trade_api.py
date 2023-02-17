@@ -16,7 +16,7 @@ class BinanceTradeApi:
         # 设置杠杆倍数
         level = exchange.set_leverage(int(level),symbol)
         logging.info(level)
-        # 设置逐仓还是全仓
+        # 设置逐仓还是全仓 
         try:
             mode = exchange.set_margin_mode(tdMode,symbol)
             logging.info(mode)
