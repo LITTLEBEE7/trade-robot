@@ -1,0 +1,220 @@
+2023/02/19/ 16:57:40 PM - INFO - 请求参数：
+2023/02/19/ 16:57:40 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'long', 'strategy.prev_market_position': 'long', 'comment': 'S_1@0.5'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 16:57:40 PM - INFO - 准备开始交易
+2023/02/19/ 16:57:40 PM - INFO - 当前交易所--binance
+2023/02/19/ 16:57:40 PM - INFO - binance---
+2023/02/19/ 16:57:40 PM - INFO - 交易对
+2023/02/19/ 16:57:40 PM - INFO - BTCUSDT
+2023/02/19/ 16:57:40 PM - INFO - 币安交易所
+2023/02/19/ 16:58:09 PM - INFO - 可用保证金
+2023/02/19/ 16:58:09 PM - INFO - 82.14785292
+2023/02/19/ 16:58:09 PM - INFO - 当前交易币种的价格
+2023/02/19/ 16:58:10 PM - INFO - 24574.50
+2023/02/19/ 16:58:10 PM - INFO - _sz0.002
+2023/02/19/ 16:58:12 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 16:58:13 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 16:58:13 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 16:58:15 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 16:58:15 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 16:58:15 PM - INFO - 下单结果信息:
+2023/02/19/ 16:58:16 PM - INFO - {'info': {'orderId': '120142206189', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qab20aeb7a66c793286500d', 'price': '0', 'avgPrice': '24569.60000', 'origQty': '0.002', 'executedQty': '0.002', 'cumQty': '0.002', 'cumQuote': '49.13920', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797095948'}, 'id': '120142206189', 'clientOrderId': 'x-FZUXxJ8Qab20aeb7a66c793286500d', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 24569.6, 'triggerPrice': None, 'amount': 0.002, 'cost': 49.1392, 'average': 24569.6, 'filled': 0.002, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 16:58:16 PM - INFO - 127.0.0.1 - - [19/Feb/2023 16:58:16] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 16:58:54 PM - INFO - 请求参数：
+2023/02/19/ 16:58:54 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'long', 'strategy.prev_market_position': 'long', 'comment': 'S_1@1'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 16:58:54 PM - INFO - 准备开始交易
+2023/02/19/ 16:58:54 PM - INFO - 当前交易所--binance
+2023/02/19/ 16:58:54 PM - INFO - binance---
+2023/02/19/ 16:58:54 PM - INFO - 交易对
+2023/02/19/ 16:58:54 PM - INFO - BTCUSDT
+2023/02/19/ 16:58:54 PM - INFO - 币安交易所
+2023/02/19/ 16:59:33 PM - INFO - 可用保证金
+2023/02/19/ 16:59:33 PM - INFO - 32.99089293
+2023/02/19/ 16:59:33 PM - INFO - 当前交易币种的价格
+2023/02/19/ 16:59:34 PM - INFO - 24563.00
+2023/02/19/ 16:59:34 PM - INFO - _sz0.001
+2023/02/19/ 16:59:35 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 16:59:36 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 16:59:37 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 16:59:38 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 16:59:38 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 16:59:38 PM - INFO - 下单结果信息:
+2023/02/19/ 16:59:40 PM - INFO - {'info': {'orderId': '120142411225', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q40a6ad9b5ce7e5e9560489', 'price': '0', 'avgPrice': '24565.40000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.56540', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797179446'}, 'id': '120142411225', 'clientOrderId': 'x-FZUXxJ8Q40a6ad9b5ce7e5e9560489', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 24565.4, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.5654, 'average': 24565.4, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 16:59:40 PM - INFO - 127.0.0.1 - - [19/Feb/2023 16:59:40] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:00:04 PM - INFO - 请求参数：
+2023/02/19/ 17:00:04 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'flat', 'strategy.prev_market_position': 'long', 'comment': 'S_1@0.5'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:00:04 PM - INFO - 准备开始交易
+2023/02/19/ 17:00:04 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:00:04 PM - INFO - binance---
+2023/02/19/ 17:00:04 PM - INFO - 交易对
+2023/02/19/ 17:00:04 PM - INFO - BTCUSDT
+2023/02/19/ 17:00:04 PM - INFO - 币安交易所
+2023/02/19/ 17:00:04 PM - INFO - 平仓
+2023/02/19/ 17:00:36 PM - INFO - {'info': {'orderId': '120142545258', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qc82982221b7e535b710b51', 'price': '0', 'avgPrice': '24565.40000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.56540', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797235384'}, 'id': '120142545258', 'clientOrderId': 'x-FZUXxJ8Qc82982221b7e535b710b51', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24565.4, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.5654, 'average': 24565.4, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:00:36 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:00:36] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:00:53 PM - INFO - 请求参数：
+2023/02/19/ 17:00:53 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'flat', 'strategy.prev_market_position': 'long', 'comment': 'S_1@1'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:00:53 PM - INFO - 准备开始交易
+2023/02/19/ 17:00:53 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:00:53 PM - INFO - binance---
+2023/02/19/ 17:00:53 PM - INFO - 交易对
+2023/02/19/ 17:00:53 PM - INFO - BTCUSDT
+2023/02/19/ 17:00:53 PM - INFO - 币安交易所
+2023/02/19/ 17:00:53 PM - INFO - 平仓
+2023/02/19/ 17:01:22 PM - INFO - {'info': {'orderId': '120142685268', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qe682bf42fe8aa2e980fbea', 'price': '0', 'avgPrice': '24570.80000', 'origQty': '0.002', 'executedQty': '0.002', 'cumQty': '0.002', 'cumQuote': '49.14160', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797281768'}, 'id': '120142685268', 'clientOrderId': 'x-FZUXxJ8Qe682bf42fe8aa2e980fbea', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24570.8, 'triggerPrice': None, 'amount': 0.002, 'cost': 49.1416, 'average': 24570.8, 'filled': 0.002, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:01:22 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:01:22] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:01:49 PM - INFO - 请求参数：
+2023/02/19/ 17:01:49 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'long', 'strategy.prev_market_position': 'flat', 'comment': 'S_1@0.5'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:01:49 PM - INFO - 准备开始交易
+2023/02/19/ 17:01:49 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:01:49 PM - INFO - binance---
+2023/02/19/ 17:01:49 PM - INFO - 交易对
+2023/02/19/ 17:01:49 PM - INFO - BTCUSDT
+2023/02/19/ 17:01:49 PM - INFO - 币安交易所
+2023/02/19/ 17:02:19 PM - INFO - 可用保证金
+2023/02/19/ 17:02:19 PM - INFO - 82.09128829
+2023/02/19/ 17:02:19 PM - INFO - 当前交易币种的价格
+2023/02/19/ 17:02:20 PM - INFO - 24587.90
+2023/02/19/ 17:02:20 PM - INFO - _sz0.002
+2023/02/19/ 17:02:21 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 17:02:22 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 17:02:23 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 17:02:24 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 17:02:24 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 17:02:24 PM - INFO - 下单结果信息:
+2023/02/19/ 17:02:25 PM - INFO - {'info': {'orderId': '120142897225', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qc29b5f1b7763ada5123161', 'price': '0', 'avgPrice': '24589.10000', 'origQty': '0.002', 'executedQty': '0.002', 'cumQty': '0.002', 'cumQuote': '49.17820', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797345314'}, 'id': '120142897225', 'clientOrderId': 'x-FZUXxJ8Qc29b5f1b7763ada5123161', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 24589.1, 'triggerPrice': None, 'amount': 0.002, 'cost': 49.1782, 'average': 24589.1, 'filled': 0.002, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:02:25 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:02:25] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:02:46 PM - INFO - 请求参数：
+2023/02/19/ 17:02:46 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'short', 'strategy.prev_market_position': 'long', 'comment': 'S_1@0.5'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:02:46 PM - INFO - 准备开始交易
+2023/02/19/ 17:02:46 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:02:46 PM - INFO - binance---
+2023/02/19/ 17:02:46 PM - INFO - 交易对
+2023/02/19/ 17:02:46 PM - INFO - BTCUSDT
+2023/02/19/ 17:02:46 PM - INFO - 币安交易所
+2023/02/19/ 17:02:46 PM - INFO - 反向订单
+2023/02/19/ 17:02:46 PM - INFO - 开仓之前先平仓
+2023/02/19/ 17:03:17 PM - INFO - {'info': {'orderId': '120143067874', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q66823dd4a8cd630866426c', 'price': '0', 'avgPrice': '24588.00000', 'origQty': '0.002', 'executedQty': '0.002', 'cumQty': '0.002', 'cumQuote': '49.17600', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797396550'}, 'id': '120143067874', 'clientOrderId': 'x-FZUXxJ8Q66823dd4a8cd630866426c', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24588.0, 'triggerPrice': None, 'amount': 0.002, 'cost': 49.176, 'average': 24588.0, 'filled': 0.002, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:03:18 PM - INFO - 可用保证金
+2023/02/19/ 17:03:18 PM - INFO - 82.04974661
+2023/02/19/ 17:03:18 PM - INFO - 当前交易币种的价格
+2023/02/19/ 17:03:19 PM - INFO - 24588.00
+2023/02/19/ 17:03:19 PM - INFO - _sz0.002
+2023/02/19/ 17:03:20 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 17:03:21 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 17:03:22 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 17:03:24 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 17:03:24 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 17:03:24 PM - INFO - 下单结果信息:
+2023/02/19/ 17:03:25 PM - INFO - {'info': {'orderId': '120143080354', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q97920c21a42b529c4d3433', 'price': '0', 'avgPrice': '24588.00000', 'origQty': '0.002', 'executedQty': '0.002', 'cumQty': '0.002', 'cumQuote': '49.17600', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797404996'}, 'id': '120143080354', 'clientOrderId': 'x-FZUXxJ8Q97920c21a42b529c4d3433', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24588.0, 'triggerPrice': None, 'amount': 0.002, 'cost': 49.176, 'average': 24588.0, 'filled': 0.002, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:03:25 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:03:25] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:04:06 PM - INFO - 请求参数：
+2023/02/19/ 17:04:06 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'short', 'strategy.prev_market_position': 'short', 'comment': 'S_1@1'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:04:06 PM - INFO - 准备开始交易
+2023/02/19/ 17:04:06 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:04:06 PM - INFO - binance---
+2023/02/19/ 17:04:06 PM - INFO - 交易对
+2023/02/19/ 17:04:06 PM - INFO - BTCUSDT
+2023/02/19/ 17:04:06 PM - INFO - 币安交易所
+2023/02/19/ 17:04:33 PM - INFO - 可用保证金
+2023/02/19/ 17:04:33 PM - INFO - 32.87354661
+2023/02/19/ 17:04:33 PM - INFO - 当前交易币种的价格
+2023/02/19/ 17:04:34 PM - INFO - 24589.80
+2023/02/19/ 17:04:34 PM - INFO - _sz0.001
+2023/02/19/ 17:04:36 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 17:04:37 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 17:04:39 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 17:04:40 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 17:04:40 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 17:04:40 PM - INFO - 下单结果信息:
+2023/02/19/ 17:04:42 PM - INFO - {'info': {'orderId': '120143297021', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q8543fbff8a1241b34d1225', 'price': '0', 'avgPrice': '24589.70000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.58970', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797481384'}, 'id': '120143297021', 'clientOrderId': 'x-FZUXxJ8Q8543fbff8a1241b34d1225', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24589.7, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.5897, 'average': 24589.7, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:04:42 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:04:42] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:06:01 PM - INFO - 请求参数：
+2023/02/19/ 17:06:01 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'sell', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'flat', 'strategy.prev_market_position': 'short', 'comment': 'S_1@1'}, 'position': 1, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:06:01 PM - INFO - 准备开始交易
+2023/02/19/ 17:06:01 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:06:01 PM - INFO - binance---
+2023/02/19/ 17:06:01 PM - INFO - 交易对
+2023/02/19/ 17:06:01 PM - INFO - BTCUSDT
+2023/02/19/ 17:06:01 PM - INFO - 币安交易所
+2023/02/19/ 17:06:01 PM - INFO - 平仓
+2023/02/19/ 17:06:28 PM - INFO - {'info': {'orderId': '120143590636', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qd22a32ff8f71eb18e077f4', 'price': '0', 'avgPrice': '24579.60000', 'origQty': '0.003', 'executedQty': '0.003', 'cumQty': '0.003', 'cumQuote': '73.73880', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797587627'}, 'id': '120143590636', 'clientOrderId': 'x-FZUXxJ8Qd22a32ff8f71eb18e077f4', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 24579.6, 'triggerPrice': None, 'amount': 0.003, 'cost': 73.7388, 'average': 24579.6, 'filled': 0.003, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:06:28 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:06:28] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:06:58 PM - INFO - 请求参数：
+2023/02/19/ 17:06:58 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'long', 'strategy.prev_market_position': 'short', 'comment': 'S_1@0.5'}, 'position': 0.9, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:06:58 PM - INFO - 准备开始交易
+2023/02/19/ 17:06:58 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:06:58 PM - INFO - binance---
+2023/02/19/ 17:06:58 PM - INFO - 交易对
+2023/02/19/ 17:06:58 PM - INFO - BTCUSDT
+2023/02/19/ 17:06:58 PM - INFO - 币安交易所
+2023/02/19/ 17:06:58 PM - INFO - 反向订单
+2023/02/19/ 17:06:58 PM - INFO - 开仓之前先平仓
+2023/02/19/ 17:07:22 PM - INFO - 平仓异常:
+2023/02/19/ 17:07:22 PM - INFO - binance amount of BTC/USDT:USDT must be greater than minimum amount precision of 3
+2023/02/19/ 17:07:24 PM - INFO - 可用保证金
+2023/02/19/ 17:07:24 PM - INFO - 82.0176448
+2023/02/19/ 17:07:24 PM - INFO - 当前交易币种的价格
+2023/02/19/ 17:07:25 PM - INFO - 24577.60
+2023/02/19/ 17:07:25 PM - INFO - _sz0.002
+2023/02/19/ 17:07:26 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 17:07:27 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 17:07:28 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 17:07:30 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 17:07:30 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 17:07:30 PM - INFO - 下单结果信息:
+2023/02/19/ 17:07:32 PM - INFO - {'info': {'orderId': '120143724689', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q816420a2b647636da53055', 'price': '0', 'avgPrice': '24577.60000', 'origQty': '0.002', 'executedQty': '0.002', 'cumQty': '0.002', 'cumQuote': '49.15520', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797650736'}, 'id': '120143724689', 'clientOrderId': 'x-FZUXxJ8Q816420a2b647636da53055', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 24577.6, 'triggerPrice': None, 'amount': 0.002, 'cost': 49.1552, 'average': 24577.6, 'filled': 0.002, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:07:32 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:07:32] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:08:14 PM - INFO - 请求参数：
+2023/02/19/ 17:08:14 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'flat', 'strategy.prev_market_position': 'short', 'comment': 'S_1@0.5'}, 'position': 0.9, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:08:14 PM - INFO - 准备开始交易
+2023/02/19/ 17:08:14 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:08:14 PM - INFO - binance---
+2023/02/19/ 17:08:14 PM - INFO - 交易对
+2023/02/19/ 17:08:14 PM - INFO - BTCUSDT
+2023/02/19/ 17:08:14 PM - INFO - 币安交易所
+2023/02/19/ 17:08:14 PM - INFO - 平仓
+2023/02/19/ 17:08:51 PM - INFO - {'info': {'orderId': '120143835220', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q884152dff5a35d77f4effe', 'price': '0', 'avgPrice': '24579.90000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.57990', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797730598'}, 'id': '120143835220', 'clientOrderId': 'x-FZUXxJ8Q884152dff5a35d77f4effe', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24579.9, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.5799, 'average': 24579.9, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:08:51 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:08:51] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:09:29 PM - INFO - 请求参数：
+2023/02/19/ 17:09:29 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'flat', 'strategy.prev_market_position': 'short', 'comment': 'S_1@1'}, 'position': 0.9, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:09:29 PM - INFO - 准备开始交易
+2023/02/19/ 17:09:29 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:09:29 PM - INFO - binance---
+2023/02/19/ 17:09:29 PM - INFO - 交易对
+2023/02/19/ 17:09:29 PM - INFO - BTCUSDT
+2023/02/19/ 17:09:29 PM - INFO - 币安交易所
+2023/02/19/ 17:09:29 PM - INFO - 平仓
+2023/02/19/ 17:10:01 PM - INFO - {'info': {'orderId': '120143995036', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Qa14e6cd98f2043ead98b2a', 'price': '0', 'avgPrice': '24599.80000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.59980', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797800759'}, 'id': '120143995036', 'clientOrderId': 'x-FZUXxJ8Qa14e6cd98f2043ead98b2a', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24599.8, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.5998, 'average': 24599.8, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:10:01 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:10:01] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:10:18 PM - INFO - 请求参数：
+2023/02/19/ 17:10:18 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'long', 'strategy.prev_market_position': 'flat', 'comment': 'S_1@0.5'}, 'position': 0.5, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:10:18 PM - INFO - 准备开始交易
+2023/02/19/ 17:10:18 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:10:18 PM - INFO - binance---
+2023/02/19/ 17:10:18 PM - INFO - 交易对
+2023/02/19/ 17:10:18 PM - INFO - BTCUSDT
+2023/02/19/ 17:10:18 PM - INFO - 币安交易所
+2023/02/19/ 17:10:42 PM - INFO - 可用保证金
+2023/02/19/ 17:10:42 PM - INFO - 82.00281085
+2023/02/19/ 17:10:42 PM - INFO - 当前交易币种的价格
+2023/02/19/ 17:10:43 PM - INFO - 24591.60
+2023/02/19/ 17:10:43 PM - INFO - _sz0.001
+2023/02/19/ 17:10:44 PM - INFO - {'code': '200', 'msg': 'The operation of cancel all open order is done.'}
+2023/02/19/ 17:10:45 PM - INFO - {'symbol': 'BTCUSDT', 'leverage': '1', 'maxNotionalValue': '500000000'}
+2023/02/19/ 17:10:46 PM - INFO - {'code': -4046, 'msg': 'No need to change margin type.'}
+2023/02/19/ 17:10:48 PM - INFO - 设置持仓模式异常信息:
+2023/02/19/ 17:10:48 PM - INFO - binance {"code":-4059,"msg":"No need to change position side."}
+2023/02/19/ 17:10:48 PM - INFO - 下单结果信息:
+2023/02/19/ 17:10:49 PM - INFO - {'info': {'orderId': '120144122359', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q7e5f238d7a726319deacdc', 'price': '0', 'avgPrice': '24591.70000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.59170', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676797848574'}, 'id': '120144122359', 'clientOrderId': 'x-FZUXxJ8Q7e5f238d7a726319deacdc', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'buy', 'price': 24591.7, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.5917, 'average': 24591.7, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:10:49 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:10:49] "POST /multi_trade HTTP/1.1" 200 -
+2023/02/19/ 17:15:51 PM - INFO - 请求参数：
+2023/02/19/ 17:15:51 PM - INFO - {'symbol': 'BTC-USDT', 'amount': '', 'side': 'buy', 'level': 1, 'strategy.market_position': 'buy', 'serverAddress': '127.0.0.1:2012', 'tdMode': 'isolated', 'type': 'market', 'tpTriggerPx': '', 'ex': 'binance', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'price': '', 'enable_stop_gain': False, 'slTriggerPx': '', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}, 'order_note': {'strategy.market_position': 'flat', 'strategy.prev_market_position': 'flat', 'comment': 'S_1@1'}, 'position': 0.5, 'strategy': 'strategyA', 'enable_stop_loss': False}
+2023/02/19/ 17:15:51 PM - INFO - 准备开始交易
+2023/02/19/ 17:15:51 PM - INFO - 当前交易所--binance
+2023/02/19/ 17:15:51 PM - INFO - binance---
+2023/02/19/ 17:15:51 PM - INFO - 交易对
+2023/02/19/ 17:15:51 PM - INFO - BTCUSDT
+2023/02/19/ 17:15:51 PM - INFO - 币安交易所
+2023/02/19/ 17:15:51 PM - INFO - 平仓
+2023/02/19/ 17:16:19 PM - INFO - {'info': {'orderId': '120145130919', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-FZUXxJ8Q57e0efb98e3a7c31acf0da', 'price': '0', 'avgPrice': '24616.80000', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '24.61680', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': '1676798179031'}, 'id': '120145130919', 'clientOrderId': 'x-FZUXxJ8Q57e0efb98e3a7c31acf0da', 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'symbol': 'BTC/USDT:USDT', 'type': 'market', 'timeInForce': 'GTC', 'postOnly': False, 'reduceOnly': False, 'side': 'sell', 'price': 24616.8, 'triggerPrice': None, 'amount': 0.001, 'cost': 24.6168, 'average': 24616.8, 'filled': 0.001, 'remaining': 0.0, 'status': 'closed', 'fee': None, 'trades': [], 'fees': [], 'stopPrice': None}
+2023/02/19/ 17:16:19 PM - INFO - 127.0.0.1 - - [19/Feb/2023 17:16:19] "POST /multi_trade HTTP/1.1" 200 -

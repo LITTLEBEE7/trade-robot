@@ -139,6 +139,21 @@ def current_positions(symbol):
 income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
 print(json.dumps(income))
 
+# 获取返佣数据总览
+# overview = client.fapiPrivateGetApiReferralOverview()
+# print(json.dumps(overview))
+# # 获取交易者每天交易明细 
+
+# traderSummary = client.fapiPrivate_get_apireferral_tradersummary()
+# print(json.dumps(traderSummary))
+
+# customization = client.fapiPrivate_get_apireferral_customization()
+# print(json.dumps(customization))
+
+# 获取交易者数量
+# traderNum = client.fapiPrivate_get_apireferral_tradernum()
+# print(json.dumps(traderNum))
+
 # hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
 # print(hh)
 # def uuid22(length=22):
