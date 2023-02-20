@@ -18,7 +18,7 @@ import configparser
 import urllib.request
 import requests
 import random
-
+import decimal
 # 读取设置
 config = {}
 if os.path.exists('./config.json'):
@@ -355,7 +355,7 @@ def start_trade():
             # 下单数量
             _amount = (float(freeBal)*_position*int(_level))/float(cuttrentPrice)
             # 合约最小交易单位为0.001
-            _sz = format(_amount,'.3f')
+            _sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
             logging.info("_sz%s"%(_sz))
             result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
             if(result["code"] == 200):
@@ -460,7 +460,7 @@ def start_multi_trade():
             # 是否是测试环境
             # binanceClient.set_sandbox_mode(True)
             binanceExchange = BinanceTradeApi()
-            if _current_market_position == "flat":
+            if _comment_side == "flat":
                 logging.info("平仓")
                 result = binanceExchange.close_multi_positions(exchange=binanceClient,symbol=_instId,proportion=float(_comment_prop))
                 if(result["code"] == 200):
@@ -499,7 +499,7 @@ def start_multi_trade():
             # 下单数量
             _amount = (float(freeBal)*float(_comment_prop)*_position*int(_level))/float(cuttrentPrice)
             # 合约最小交易单位为0.001
-            _sz = format(_amount,'.3f')
+            _sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
             logging.info("_sz%s"%(_sz))
             result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
             if(result["code"] == 200):
