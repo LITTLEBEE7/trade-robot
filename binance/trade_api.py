@@ -1,6 +1,7 @@
 import logging
 import json
 import random
+import decimal
 class BinanceTradeApi:
     # 下单
     def palce_order(self,exchange,symbol,type,side,amount,level,tdMode,price):
@@ -134,7 +135,8 @@ class BinanceTradeApi:
         try:
             positions = exchange.fetch_positions([symbol])
             for pos in positions:
-                sz = pos["contracts"]*proportion
+                _amount = pos["contracts"]*proportion
+                sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
                 side = pos["side"]
                 if(side == "short"):
                    res = exchange.create_order(symbol=symbol,type="market",side="buy",amount=float(sz),price="",params={"newClientOrderId":"x-FZUXxJ8Q"+self.uuid22()})
