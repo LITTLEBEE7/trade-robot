@@ -39,8 +39,8 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "XeQeDfPEc65jsNl4q7fs7mnNpvpX5eTbjp0aWCiRtA9HUKAUVTv9foXT5KJUlxhk"
-secret_key = "eCeWD98rAsSKsC3C5TKqZyHJ3sOZ2sY7WbKkUyfepKd4J86Un6BnU5b6Qbf02kFA"
+api_key = "rNCDGk6PJx8w0Q8qgiBXGCAaIjgVrulysDktdao54HAMyg8mAIitmCdWhF2GuUpu"
+secret_key = "zb1qz7liiDuvkHQlRoYHKUWqEHlriI4kFw1Yjf7TnQYq9m37aTybeTdlDLSyRlK9"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -136,8 +136,8 @@ def current_positions(symbol):
 
 # price = client.fetch_ticker("BTCUSDT")
 # print(price["info"]["lastPrice"])
-income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
-print(json.dumps(income))
+# income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
+# print(json.dumps(income))
 
 # 获取返佣数据总览
 # overview = client.fapiPrivateGetApiReferralOverview()
@@ -154,8 +154,8 @@ print(json.dumps(income))
 # traderNum = client.fapiPrivate_get_apireferral_tradernum()
 # print(json.dumps(traderNum))
 
-# hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
-# print(hh)
+hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
+print(hh)
 # def uuid22(length=22):
 #     return format(random.getrandbits(length * 4), 'x')
 
