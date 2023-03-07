@@ -1,5 +1,5 @@
 import random
-from re import S
+import re
 from turtle import position
 from binance.binance_exchange import BinanceExchange
 import okx.Account_api as Account
@@ -13,6 +13,8 @@ import json
 from flask import Flask
 from flask import request, abort
 import os
+import logging
+from logging.handlers import TimedRotatingFileHandler
 import _thread
 import configparser
 import urllib.request
@@ -36,11 +38,60 @@ else:
     print("配置文件 config.json 不存在，程序即将退出")
     exit()
 
+
+# 格式化日志
+# currentPath = os.getcwd().replace('\\','/')
+# log_path = os.path.join(currentPath,"my_trade.log")
+# file_handler = TimedRotatingFileHandler(
+#     filename=log_path, when="MIDNIGHT", interval=1, backupCount=30
+# )
+# file_handler.suffix = "%Y-%m-%d.log"
+# # extMatch是编译好正则表达式，用于匹配日志文件名后缀
+# # 需要注意的是suffix和extMatch一定要匹配的上，如果不匹配，过期日志不会被删除。
+# file_handler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}.log$")
+# # 定义日志输出格式
+# file_handler.setFormatter(
+#     logging.Formatter(
+#         "[%(asctime)s] [%(process)d] [%(levelname)s] - %(module)s.%(funcName)s (%(filename)s:%(lineno)d) - %(message)s"
+#     )
+# )
+# logger = logging.getLogger("my_trade.log").addHandler(file_handler)
+# # LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
+# # DATE_FORMAT = "%Y/%m/%d/ %H:%M:%S %p"
+# # logging.basicConfig(filename='log/my_trade.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT)
+
+def setup_log(log_name):
+    # 创建logger对象。传入logger名字
+    logger = logging.getLogger(log_name)
+    currentPath = os.getcwd().replace('\\','/')
+    log_path = os.path.join(currentPath+"/log",log_name)
+    # 设置日志记录等级
+    logger.setLevel(logging.INFO)
+    # interval 滚动周期，
+    # when="MIDNIGHT", interval=1 表示每天0点为更新点，每天生成一个文件
+    # backupCount  表示日志保存个数
+    file_handler = TimedRotatingFileHandler(
+        filename=log_path, when="MIDNIGHT", interval=1, backupCount=30
+    )
+    # filename="mylog" suffix设置，会生成文件名为mylog.2020-02-25.log
+    file_handler.suffix = "%Y-%m-%d.log"
+    # extMatch是编译好正则表达式，用于匹配日志文件名后缀
+    # 需要注意的是suffix和extMatch一定要匹配的上，如果不匹配，过期日志不会被删除。
+    file_handler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}.log$")
+    # 定义日志输出格式
+    file_handler.setFormatter(
+        logging.Formatter(
+            "[%(asctime)s] [%(process)d] [%(levelname)s] - %(module)s.%(funcName)s (%(filename)s:%(lineno)d) - %(message)s"
+        )
+    )
+    logger.addHandler(file_handler)
+    return logger
+
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = ""
-secret_key = ""
+api_key = "HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW"
+secret_key = "Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -131,6 +182,8 @@ def current_positions(symbol):
 # 可用保证金
 # print("可用保证金")
 # print(balance["free"]["USDT"])
+
+
 # cancelResult = client.cancel_all_orders("BTCUSDT")
 # print(cancelResult)
 
@@ -154,8 +207,8 @@ def current_positions(symbol):
 # traderNum = client.fapiPrivate_get_apireferral_tradernum()
 # print(json.dumps(traderNum))
 
-hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
-print(hh)
+# hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
+# print(hh)
 # def uuid22(length=22):
 #     return format(random.getrandbits(length * 4), 'x')
 
@@ -164,3 +217,17 @@ print(hh)
 # history = client.fetch_orders(symbol="BTCUSDT")
 # print(history)
 
+
+# 获取用户的交易记录
+
+# logger = setup_log("my_trade")
+# history2 = client.fapiPrivateGetUserTrades({"symbol":"BTCUSDT"})
+# print(json.dumps(history2))
+# order1 = client.fetch_order(id="126090619157",symbol="BTCUSDT")
+# print(json.dumps(order1))
+order2 = client.fetch_order(id="126095854155",symbol="BTCUSDT")
+print(json.dumps(order2))
+
+# 用户当前的持仓
+# positions = client.fapiPrivateGetAccount()
+# print(json.dumps(positions))
