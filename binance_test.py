@@ -90,8 +90,8 @@ def setup_log(log_name):
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = "HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW"
-secret_key = "Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv"
+api_key = ""
+secret_key = ""
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -207,8 +207,8 @@ def current_positions(symbol):
 # traderNum = client.fapiPrivate_get_apireferral_tradernum()
 # print(json.dumps(traderNum))
 
-# hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
-# print(hh)
+hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
+print(hh)
 # def uuid22(length=22):
 #     return format(random.getrandbits(length * 4), 'x')
 
@@ -225,8 +225,8 @@ def current_positions(symbol):
 # print(json.dumps(history2))
 # order1 = client.fetch_order(id="126090619157",symbol="BTCUSDT")
 # print(json.dumps(order1))
-order2 = client.fetch_order(id="126095854155",symbol="BTCUSDT")
-print(json.dumps(order2))
+# order2 = client.fetch_order(id="126095854155",symbol="BTCUSDT")
+# print(json.dumps(order2))
 
 # 用户当前的持仓
 # positions = client.fapiPrivateGetAccount()
