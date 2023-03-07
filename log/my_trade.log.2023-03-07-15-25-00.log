@@ -1,7 +1,0 @@
-[2023-03-07 15:25:00,016] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:193) - 请求参数：
-[2023-03-07 15:25:00,017] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:194) - {'strategy': 'Strategy1', 'apiSec': '5BFasdasdtNg7hwkgCzYQMJSDHDSHD2qOzmtldJasdc', 'symbol': 'BTC-USDT', 'multi': 'no', 'amount': '', 'type': 'market', 'side': 'buy', 'price': '', 'tdMode': 'isolated', 'level': '1', 'position': '0.9', 'strategy.market_position': 'flat', 'strategy.prev_market_position': 'short', 'serverAddress': '127.0.0.1:2012', 'enable_stop_loss': False, 'enable_stop_gain': False, 'slTriggerPx': '', 'tpTriggerPx': '', 'ex': 'binance', 'exchange': {'secret_key': 'Uucdbt3Pl8eyVZszzROIqGIDhKKYQBv15yXGO2Syz0hTnVoPjF9UT1FlYuuQDcbv', 'api_key': 'HYnhaQ4kmPNiWEqP22UkYvsQDXFa4ogUUUFMRmuGJmvpZgJCXOJPL2mLP9SARDNW', 'name': 'binance', 'passphrase': ''}}
-[2023-03-07 15:25:00,017] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:238) - 准备开仓
-[2023-03-07 15:25:00,017] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:346) - 交易对
-[2023-03-07 15:25:00,017] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:347) - BTCUSDT
-[2023-03-07 15:25:00,017] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:348) - 币安交易所
-[2023-03-07 15:25:00,038] [4267] [INFO] - trade_robot.start_trade (trade_robot.py:354) - 开始平仓

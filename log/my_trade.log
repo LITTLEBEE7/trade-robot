@@ -1,2 +1,0 @@
-[2023-03-07 15:25:10,049] [4267] [INFO] - trade_api.close_positions (trade_api.py:118) - 平仓异常:
-[2023-03-07 15:25:10,051] [4267] [INFO] - trade_api.close_positions (trade_api.py:119) - binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1678173900039&recvWindow=10000&signature=c63a736b1d4e8792ba120b909de3b2537f468648a1e08d363ecdfd0f16ce0c21
