@@ -90,8 +90,8 @@ def setup_log(log_name):
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = ""
-secret_key = ""
+api_key = "EPlQ2OTsBiiN3eKv2bkgf7kvM0oeFORxqxgq1R9NAPgnOPPUXK7UBpYczvgsiYfx"
+secret_key = "HeP7T0Jn2IG2j5OuWjbDOIHMtIWOsdJjxUYs02lffGcwz1jcoBdri3Vzg0NVbZ4j"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -175,13 +175,13 @@ def current_positions(symbol):
 # current_positions(["BTCUSDT"])
 
 # 获取账户的可用余额
-# balance = client.fetch_balance({"type":"future"})
+balance = client.fetch_balance({"type":"future"})
 # print(balance["total"])
 # print(balance["free"])
 # print(balance["used"])
 # 可用保证金
-# print("可用保证金")
-# print(balance["free"]["USDT"])
+print("可用保证金")
+print(balance["free"]["USDT"])
 
 
 # cancelResult = client.cancel_all_orders("BTCUSDT")
@@ -207,8 +207,8 @@ def current_positions(symbol):
 # traderNum = client.fapiPrivate_get_apireferral_tradernum()
 # print(json.dumps(traderNum))
 
-hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
-print(hh)
+# hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
+# print(hh)
 # def uuid22(length=22):
 #     return format(random.getrandbits(length * 4), 'x')
 
@@ -221,9 +221,9 @@ print(hh)
 # 获取用户的交易记录
 
 # logger = setup_log("my_trade")
-# history2 = client.fapiPrivateGetUserTrades({"symbol":"BTCUSDT"})
+# history2 = client.fapiPrivateGetUserTrades({"symbol":"BTCUSDT","limit":"10"})
 # print(json.dumps(history2))
-# order1 = client.fetch_order(id="126090619157",symbol="BTCUSDT")
+# order1 = client.fetch_order(id="126518863730",symbol="BTCUSDT")
 # print(json.dumps(order1))
 # order2 = client.fetch_order(id="126095854155",symbol="BTCUSDT")
 # print(json.dumps(order2))
