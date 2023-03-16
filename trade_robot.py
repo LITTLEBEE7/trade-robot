@@ -377,150 +377,6 @@ def start_trade():
 
 
 # # 接收post请求-下单-单向多笔方案1
-# @app.route('/multi_trade', methods=['POST'])
-# def start_multi_trade():
-#     res = {
-#     "statusCode":2000,
-#     "msg":"订单交易成功",
-#     "orderData":{
-#         "info":"",
-#         "orderId":""
-#     },
-#     "closeData":{
-#         "info":"",
-#         "closeOrderId":""
-#     }
-#     }
-#     # 获取请求体
-#     _params = request.json
-#     logging.info("请求参数：")
-#     logging.info(_params)
-#     if "symbol" not in _params or _params["symbol"] == "":
-#         res['msg'] = "未设置交易币种对"
-#         res["statusCode"] = 2002
-#         return res
-#     if "strategy.market_position" not in _params or _params["strategy.market_position"] == "":
-#         res['msg'] = "未设置策略的当前位置"
-#         res["statusCode"] = 2003
-#         return res
-#     if "tdMode" not in _params or _params["tdMode"] == "":
-#         res['msg'] = "未设置交易模式"
-#         res["statusCode"] = 2004
-#         return res
-#     if "side" not in _params or _params["side"] == "":
-#         res['msg'] = "未设置订单方向"
-#         res["statusCode"] = 2006
-#         return res
-#     if "position" not in _params or _params["position"] == "":
-#         res['msg'] = "未设置仓位比例"
-#         res["statusCode"] = 2007
-#         return res
-#     api_key = _params["exchange"]['api_key']
-#     secret_key = _params["exchange"]['secret_key']
-#     passphrase = _params["exchange"]['passphrase']
-#     _instId = _params["symbol"]
-#     _orderType = _params["type"]
-#     _side = _params["side"]
-#     _sz = _params["amount"]
-#     _position = float(_params["position"])
-#     _strategyPosition = _params["strategy.market_position"]
-#     _tdMode = _params["tdMode"]
-#     _level = _params["level"]
-#     _exchange = _params["exchange"]["name"]
-#     _order_note = _params["order_note"]
-#     if(_orderType == "limit"):
-#         _px = _params["price"]
-#     else:
-#         _px = None
-#     logging.info("准备开始交易")
-#     logging.info("当前交易所--"+_exchange)
-#     # 当前策略位置
-#     _current_market_position = _order_note["strategy.market_position"]
-#     # 上一笔策略位置
-#     _pre_market_position = _order_note["strategy.prev_market_position"]
-#     # 策略注释
-#     _comment = _order_note["comment"]
-#     _commentSplit = _comment.split("@")
-#     _comment_side = _commentSplit[0]
-#     _comment_prop = _commentSplit[1]
-#     if(_exchange == "okx"):
-#         # okx交易所
-#         logging.info("okx---")
-#     elif(_exchange == "binance"):
-#         try:
-#             # binance交易所
-#             logging.info("binance---")
-#             # 将symbol转换成币安平台需要的symbol
-#             _symbolSplit = _instId.upper().split("-")
-#             _instId = _symbolSplit[0]+_symbolSplit[1]
-#             logging.info("交易对")
-#             logging.info(_instId)
-#             logging.info("币安交易所")
-#             binanceClient = BinanceExchange(apiKey=api_key,secret=secret_key).client()
-#             # 是否是测试环境
-#             # binanceClient.set_sandbox_mode(True)
-#             binanceExchange = BinanceTradeApi()
-#             if _comment_side == "flat":
-#                 logging.info("平仓")
-#                 result = binanceExchange.close_multi_positions(exchange=binanceClient,symbol=_instId,proportion=float(_comment_prop))
-#                 if(result["code"] == 200):
-#                     res["closeData"]["info"] = "平仓成功"
-#                     res["closeData"]["closeOrderId"] = result["msg"]
-#                 else:
-#                     res["statusCode"] = result["code"]
-#                     res['msg'] = "平仓失败"
-#                     res["closeData"]["info"] = result["msg"]
-#                 return res
-#             # 当前订单不为平仓订单且和上笔订单方向不一致
-#             elif _current_market_position != _pre_market_position and _pre_market_position != "flat":
-#                 logging.info("反向订单")
-#                 # 先平仓再下单
-#                 try:
-#                     logging.info("开仓之前先平仓")
-#                     result = binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
-#                     if(result["code"] == 200):
-#                         res["closeData"]['info']  = "平仓成功"
-#                         res["closeData"]["closeOrderId"] = result["msg"]
-#                     else:
-#                         res["closeData"]['info'] = result["msg"]
-#                 except Exception as e:
-#                     logging.info(e)
-#             # 下单
-#             # 获取账户的可用余额
-#             balance = binanceClient.fetch_balance({"type":"future"})
-#             freeBal = balance["free"]["USDT"]
-#             # 可用保证金
-#             logging.info("可用保证金")
-#             logging.info(freeBal)
-#             logging.info("当前交易币种的价格")
-#             price = binanceClient.fetch_ticker(_instId)
-#             cuttrentPrice = price["info"]["lastPrice"]
-#             logging.info(cuttrentPrice)
-#             # 下单数量
-#             _amount = (float(freeBal)*float(_comment_prop)*_position*int(_level))/float(cuttrentPrice)
-#             # 合约最小交易单位为0.001
-#             _sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
-#             logging.info("_sz%s"%(_sz))
-#             result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
-#             if(result["code"] == 200):
-#                 res["orderData"]['info'] = "下单成功"
-#                 res["orderData"]["orderId"] = result["msg"]
-#             else:
-#                 res["statusCode"] = result["code"]
-#                 res['msg'] = ""
-#                 res["orderData"]['info'] = result["msg"]
-
-#         except Exception as e:
-#             logging.info(e)
-#             res["statusCode"] = 2005
-#             res['msg'] = "服务器内部错误"
-#     else:
-#         res['msg']="交易所不存在"
-#         res["statusCode"]=5000
-#     return res
-
-
-# 接收post请求-下单-单向多笔方案2
 @app.route('/multi_trade', methods=['POST'])
 def start_multi_trade():
     res = {
@@ -616,7 +472,7 @@ def start_multi_trade():
                     res["closeData"]["info"] = result["msg"]
                 return res
             # 当前订单不为平仓订单且和上笔订单方向不一致
-            elif _comment_prop ==  "1":
+            elif _current_market_position != _pre_market_position and _pre_market_position != "flat":
                 logging.info("反向订单")
                 # 先平仓再下单
                 try:
@@ -629,32 +485,31 @@ def start_multi_trade():
                         res["closeData"]['info'] = result["msg"]
                 except Exception as e:
                     logging.info(e)
-                # 下单
-                # 获取账户的可用余额
-                balance = binanceClient.fetch_balance({"type":"future"})
-                freeBal = balance["free"]["USDT"]
-                # 可用保证金
-                logging.info("可用保证金")
-                logging.info(freeBal)
-                logging.info("当前交易币种的价格")
-                price = binanceClient.fetch_ticker(_instId)
-                cuttrentPrice = price["info"]["lastPrice"]
-                logging.info(cuttrentPrice)
-                # 下单数量
-                _amount = (float(freeBal)*float(_comment_prop)*_position*int(_level))/float(cuttrentPrice)
-                # 合约最小交易单位为0.001
-                _sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
-                logging.info("_sz%s"%(_sz))
-                result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
-                if(result["code"] == 200):
-                    res["orderData"]['info'] = "下单成功"
-                    res["orderData"]["orderId"] = result["msg"]
-                else:
-                    res["statusCode"] = result["code"]
-                    res['msg'] = ""
-                    res["orderData"]['info'] = result["msg"]
+            # 下单
+            # 获取账户的可用余额
+            balance = binanceClient.fetch_balance({"type":"future"})
+            freeBal = balance["free"]["USDT"]
+            # 可用保证金
+            logging.info("可用保证金")
+            logging.info(freeBal)
+            logging.info("当前交易币种的价格")
+            price = binanceClient.fetch_ticker(_instId)
+            cuttrentPrice = price["info"]["lastPrice"]
+            logging.info(cuttrentPrice)
+            # 下单数量
+            _amount = (float(freeBal)*float(_comment_prop)*_position*int(_level))/float(cuttrentPrice)
+            # 合约最小交易单位为0.001
+            _sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
+            logging.info("_sz%s"%(_sz))
+            result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+            if(result["code"] == 200):
+                res["orderData"]['info'] = "下单成功"
+                res["orderData"]["orderId"] = result["msg"]
             else:
-                res['msg'] = "单向多笔交易"
+                res["statusCode"] = result["code"]
+                res['msg'] = ""
+                res["orderData"]['info'] = result["msg"]
+
         except Exception as e:
             logging.info(e)
             res["statusCode"] = 2005
@@ -663,6 +518,151 @@ def start_multi_trade():
         res['msg']="交易所不存在"
         res["statusCode"]=5000
     return res
+
+
+# 接收post请求-下单-单向多笔方案2
+# @app.route('/multi_trade', methods=['POST'])
+# def start_multi_trade():
+#     res = {
+#     "statusCode":2000,
+#     "msg":"订单交易成功",
+#     "orderData":{
+#         "info":"",
+#         "orderId":""
+#     },
+#     "closeData":{
+#         "info":"",
+#         "closeOrderId":""
+#     }
+#     }
+#     # 获取请求体
+#     _params = request.json
+#     logging.info("请求参数：")
+#     logging.info(_params)
+#     if "symbol" not in _params or _params["symbol"] == "":
+#         res['msg'] = "未设置交易币种对"
+#         res["statusCode"] = 2002
+#         return res
+#     if "strategy.market_position" not in _params or _params["strategy.market_position"] == "":
+#         res['msg'] = "未设置策略的当前位置"
+#         res["statusCode"] = 2003
+#         return res
+#     if "tdMode" not in _params or _params["tdMode"] == "":
+#         res['msg'] = "未设置交易模式"
+#         res["statusCode"] = 2004
+#         return res
+#     if "side" not in _params or _params["side"] == "":
+#         res['msg'] = "未设置订单方向"
+#         res["statusCode"] = 2006
+#         return res
+#     if "position" not in _params or _params["position"] == "":
+#         res['msg'] = "未设置仓位比例"
+#         res["statusCode"] = 2007
+#         return res
+#     api_key = _params["exchange"]['api_key']
+#     secret_key = _params["exchange"]['secret_key']
+#     passphrase = _params["exchange"]['passphrase']
+#     _instId = _params["symbol"]
+#     _orderType = _params["type"]
+#     _side = _params["side"]
+#     _sz = _params["amount"]
+#     _position = float(_params["position"])
+#     _strategyPosition = _params["strategy.market_position"]
+#     _tdMode = _params["tdMode"]
+#     _level = _params["level"]
+#     _exchange = _params["exchange"]["name"]
+#     _order_note = _params["order_note"]
+#     if(_orderType == "limit"):
+#         _px = _params["price"]
+#     else:
+#         _px = None
+#     logging.info("准备开始交易")
+#     logging.info("当前交易所--"+_exchange)
+#     # 当前策略位置
+#     _current_market_position = _order_note["strategy.market_position"]
+#     # 上一笔策略位置
+#     _pre_market_position = _order_note["strategy.prev_market_position"]
+#     # 策略注释
+#     _comment = _order_note["comment"]
+#     _commentSplit = _comment.split("@")
+#     _comment_side = _commentSplit[0]
+#     _comment_prop = _commentSplit[1]
+#     if(_exchange == "okx"):
+#         # okx交易所
+#         logging.info("okx---")
+#     elif(_exchange == "binance"):
+#         try:
+#             # binance交易所
+#             logging.info("binance---")
+#             # 将symbol转换成币安平台需要的symbol
+#             _symbolSplit = _instId.upper().split("-")
+#             _instId = _symbolSplit[0]+_symbolSplit[1]
+#             logging.info("交易对")
+#             logging.info(_instId)
+#             logging.info("币安交易所")
+#             binanceClient = BinanceExchange(apiKey=api_key,secret=secret_key).client()
+#             # 是否是测试环境
+#             # binanceClient.set_sandbox_mode(True)
+#             binanceExchange = BinanceTradeApi()
+#             if _comment_side == "flat":
+#                 logging.info("平仓")
+#                 result = binanceExchange.close_multi_positions(exchange=binanceClient,symbol=_instId,proportion=float(_comment_prop))
+#                 if(result["code"] == 200):
+#                     res["closeData"]["info"] = "平仓成功"
+#                     res["closeData"]["closeOrderId"] = result["msg"]
+#                 else:
+#                     res["statusCode"] = result["code"]
+#                     res['msg'] = "平仓失败"
+#                     res["closeData"]["info"] = result["msg"]
+#                 return res
+#             # 当前订单不为平仓订单且和上笔订单方向不一致
+#             elif _comment_prop ==  "1":
+#                 logging.info("反向订单")
+#                 # 先平仓再下单
+#                 try:
+#                     logging.info("开仓之前先平仓")
+#                     result = binanceExchange.close_positions(exchange=binanceClient,symbol=_instId)
+#                     if(result["code"] == 200):
+#                         res["closeData"]['info']  = "平仓成功"
+#                         res["closeData"]["closeOrderId"] = result["msg"]
+#                     else:
+#                         res["closeData"]['info'] = result["msg"]
+#                 except Exception as e:
+#                     logging.info(e)
+#                 # 下单
+#                 # 获取账户的可用余额
+#                 balance = binanceClient.fetch_balance({"type":"future"})
+#                 freeBal = balance["free"]["USDT"]
+#                 # 可用保证金
+#                 logging.info("可用保证金")
+#                 logging.info(freeBal)
+#                 logging.info("当前交易币种的价格")
+#                 price = binanceClient.fetch_ticker(_instId)
+#                 cuttrentPrice = price["info"]["lastPrice"]
+#                 logging.info(cuttrentPrice)
+#                 # 下单数量
+#                 _amount = (float(freeBal)*float(_comment_prop)*_position*int(_level))/float(cuttrentPrice)
+#                 # 合约最小交易单位为0.001
+#                 _sz = decimal.Decimal(str(_amount)).quantize(decimal.Decimal('0.000'), rounding=decimal.ROUND_DOWN)
+#                 logging.info("_sz%s"%(_sz))
+#                 result =  binanceExchange.palce_order(exchange=binanceClient,symbol=_instId,type=_orderType,side=_side,amount=_sz,level=_level,tdMode=_tdMode,price=_px)
+#                 if(result["code"] == 200):
+#                     res["orderData"]['info'] = "下单成功"
+#                     res["orderData"]["orderId"] = result["msg"]
+#                 else:
+#                     res["statusCode"] = result["code"]
+#                     res['msg'] = ""
+#                     res["orderData"]['info'] = result["msg"]
+#             else:
+#                 res['msg'] = "单向多笔交易"
+#         except Exception as e:
+#             logging.info(e)
+#             res["statusCode"] = 2005
+#             res['msg'] = "服务器内部错误"
+#     else:
+#         res['msg']="交易所不存在"
+#         res["statusCode"]=5000
+#     return res
 
 
 if __name__ == '__main__':
