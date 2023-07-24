@@ -1,6 +1,5 @@
 import random
 from re import S
-from turtle import position
 from binance.binance_exchange import BinanceExchange
 import okx.Account_api as Account
 import okx.Funding_api as Funding
@@ -39,8 +38,8 @@ else:
 # 服务配置
 apiSec = config['service']['api_sec']
 # type your api mesage
-api_key = ""
-secret_key = ""
+api_key = "XeQeDfPEc65jsNl4q7fs7mnNpvpX5eTbjp0aWCiRtA9HUKAUVTv9foXT5KJUlxhk"
+secret_key = "eCeWD98rAsSKsC3C5TKqZyHJ3sOZ2sY7WbKkUyfepKd4J86Un6BnU5b6Qbf02kFA"
 # flag = '1'  # 模拟盘 demo trading
 # flag = '0'  # 实盘 real trading
 
@@ -124,24 +123,24 @@ def current_positions(symbol):
 # current_positions(["BTCUSDT"])
 
 # 获取账户的可用余额
-# balance = client.fetch_balance({"type":"future"})
+balance = client.fetch_balance({"type":"future"})
 # print(balance["total"])
 # print(balance["free"])
 # print(balance["used"])
 # 可用保证金
 # print("可用保证金")
-# print(balance["free"]["USDT"])
+print(balance["free"]["USDT"])
 # cancelResult = client.cancel_all_orders("BTCUSDT")
 # print(cancelResult)
 
 # price = client.fetch_ticker("BTCUSDT")
 # print(price["info"]["lastPrice"])
-# income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
-# print(json.dumps(income))
+income = client.fapiPrivateGetIncome({"incomeType":"API_REBATE"})
+print(json.dumps(income))
 
 # 获取返佣数据总览
-# overview = client.fapiPrivateGetApiReferralOverview()
-# print(json.dumps(overview))
+overview = client.fapiPrivateGetApiReferralOverview()
+print(json.dumps(overview))
 # # 获取交易者每天交易明细 
 
 # traderSummary = client.fapiPrivate_get_apireferral_tradersummary()
@@ -154,13 +153,22 @@ def current_positions(symbol):
 # traderNum = client.fapiPrivate_get_apireferral_tradernum()
 # print(json.dumps(traderNum))
 
-hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
-print(hh)
+# hh = client.fapiPrivateGetApiReferralIfNewUser({"brokerId":"FZUXxJ8Q"})
+# print(hh)
 # def uuid22(length=22):
 #     return format(random.getrandbits(length * 4), 'x')
 
 # print(uuid22())
 
-# history = client.fetch_orders(symbol="BTCUSDT")
-# print(history)
+# history2 = client.fapiPrivateGetUserTrades({"symbol":"BTCUSDT"})
+# print(json.dumps(history2))
+
+
+# print(json.dumps(client.fetch_order(id="127097698093",symbol="BTCUSDT")))
+# print(json.dumps(client.fetch_order(id="127098908434",symbol="BTCUSDT")))
+# print(json.dumps(client.fetch_order(id="127140693010",symbol="BTCUSDT")))
+# print(json.dumps(client.fetch_order(id="127149661573",symbol="BTCUSDT")))
+# print(json.dumps(client.fetch_order(id="127261278303",symbol="BTCUSDT")))
+# print(json.dumps(client.fetch_order(id="27269217366",symbol="BTCUSDT")))
+# print(json.dumps(client.fetch_order(id="128979087582",symbol="BTCUSDT")))
 

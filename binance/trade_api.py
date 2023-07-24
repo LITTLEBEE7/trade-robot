@@ -46,6 +46,8 @@ class BinanceTradeApi:
             # logging.info(exc["msg"])
             response["code"] = 3000
             response["msg"]= str(e.args[0])
+            if "-1001" in str(e.args[0]):
+                response["code"] = -1001
         return response
     
     # 多笔下单
@@ -91,6 +93,8 @@ class BinanceTradeApi:
             # logging.info(exc["msg"])
             response["code"] = 3000
             response["msg"]= str(e.args[0])
+            if "-1001" in str(e.args[0]):
+                response["code"] = -1001
         return response
 
     # 随机数
@@ -124,6 +128,8 @@ class BinanceTradeApi:
             # logging.info(exc["msg"])
             response["code"] = 3000
             response["msg"]= str(e.args[0])
+            if "-1001" in str(e.args[0]):
+                response["code"] = -1001
         return response
     
     # 多笔市价平仓
@@ -155,4 +161,6 @@ class BinanceTradeApi:
             # logging.info(exc["msg"])
             response["code"] = 3000
             response["msg"]= str(e.args[0])
+            if "-1001" in str(e.args[0]):
+                response["code"] = -1001
         return response
